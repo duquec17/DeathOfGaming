@@ -44,7 +44,7 @@ public class TownBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        def_Text.text = " " + total_DEF;
+        def_Text.text = "DEF:  " + total_DEF;
     }
 
     public void def_Calculation()
