@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BuildInfo : MonoBehaviour
 {
     public string message;
 
-    private void OnMouseEnter()
+    private void OnMouseDown()
     {
         BuildInfoManager._instance.SetAndShowBuildInfo(message);
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 
-    private void OnMouseExit()
+    public void DeleteInfo()
     {
         BuildInfoManager._instance.HideBuildInfo();
+        GetComponent<BoxCollider2D>().enabled = true;
     }
+
 }
