@@ -15,6 +15,9 @@ public class TownBehaviour : MonoBehaviour
 {
     // Variables for updating text
     public TMP_Text def_Text;
+    public TMP_Text eng_Text;
+    public TMP_Text food_Text;
+    public TMP_Text rec_Text;
 
     // Variables that track all values once they're calculated
     int total_DEF;
@@ -34,22 +37,25 @@ public class TownBehaviour : MonoBehaviour
         // Calculates total def
         def_Calculation();
 
-        // Display current total resources
-        print(" " + total_DEF);
-        print(" " + total_ENG);
-        print(" " + total_FOOD);
-        print(" " + total_REC);
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Updates 
         def_Text.text = "DEF:  " + total_DEF;
+        eng_Text.text = "ENG:  " + total_ENG;
+        food_Text.text = "FOOD:  " + total_FOOD;
+        rec_Text.text = "REC:  " + total_REC;
+
     }
 
     public void def_Calculation()
     {
         // Calculates total def
         total_DEF = total_DEF + segundo_Sol_DEF;
+        total_ENG = total_ENG + segundo_Sol_ENG;
+        total_FOOD = total_FOOD + segundo_Sol_FOOD;
+        total_REC = total_REC + segundo_Sol_REC;
     }
 }
