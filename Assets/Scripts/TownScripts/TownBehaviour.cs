@@ -58,4 +58,9 @@ public class TownBehaviour : MonoBehaviour
         total_FOOD = total_FOOD + segundo_Sol_FOOD;
         total_REC = total_REC + segundo_Sol_REC;
     }
+
+    public void DEFIncrease()
+    {
+        total_DEF = total_DEF + 20;
+    }
 }
