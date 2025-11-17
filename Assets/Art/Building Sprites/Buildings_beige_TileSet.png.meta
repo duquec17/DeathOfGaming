@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,784 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_0
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 176
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9eceb7d409b91a4ba7af83dd1f4d049
+      internalID: -956672870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1cbd3edc451fb9468a1dacc566e89a0
+      internalID: -137850280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 48
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcda35e518332041a361db2317448c6
+      internalID: 229658015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46d2b639052c104dab7fc29be4eaab5
+      internalID: -291192047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_4
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 135
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296466d18c34e164595a2e2a7e7cb006
+      internalID: -2005394044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6e8a1889df8c84788e70edb757d048
+      internalID: -570819443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_6
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 160
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa6579030c3bf1469b553fb3001f4af
+      internalID: 1594091294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e40b6aa2a539424c94afb98f270abd9
+      internalID: -760122321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f0137759070a64ab8f94805a29b7ad
+      internalID: 1619392250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 119
+        width: 96
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83868d19e5543b4c993340ae5598971
+      internalID: -515838636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_10
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 160
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee94393e2ebba44490eb8e4e55a8c3f
+      internalID: 1297442033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 113
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80ecee00190a4e459034a3fa977891a
+      internalID: 635284005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 113
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ce92474329cba489efe4df90254e2b
+      internalID: -1301707408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46b17c9705b78441950d1b2c3bbb6c6
+      internalID: 1490924032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_14
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 64
+        width: 17
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457209d75ccdc64428aa00e307239387
+      internalID: -776863053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 15
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea29158b636c959458e38735bd4a8594
+      internalID: 1855895034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59cb71d9feb2989419db48da06784fd2
+      internalID: -219888661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_17
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 64
+        width: 14
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f27f1ea6a4ae944a57cd5cbece7d2e
+      internalID: -655687883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 104
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b430ca4346b134d9689f94d4754d4d
+      internalID: -986635714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_19
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 10
+        width: 8
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102f67d6477510c49b226a7dcf78d198
+      internalID: -1805202928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 38
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3f7e9824c520f4d9ff17f1edfed8b2
+      internalID: 1021672374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4237d2ee3ed39fa43bd43bd415d6f65e
+      internalID: -402112311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 8
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898fca4d076bc494797463563baaaf58
+      internalID: 1532650112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_23
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 15
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45eb8ba513e8e0f46a42a1acd99c1968
+      internalID: 150790646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 178
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2aa92111376061438c516c525726ef7
+      internalID: -1536168822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_25
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 128
+        width: 30
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdcd634b27ad5aa4cb933b0f6852ee92
+      internalID: 2036466359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_26
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 178
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6892ef1cd316e7c4c83ab832335f05d2
+      internalID: 690072108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_27
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 64
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9fc5b64af53954a9434d2003c58da8
+      internalID: 1617566731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_28
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 40
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ad9e1e9c14d1641bac994e09d9ca45
+      internalID: -787773924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_29
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 15
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1764897441301f348ba5199c65e5edbc
+      internalID: 919381663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_30
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 0
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5d99cbff2ef2748b8096386809190d
+      internalID: -1563875710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_31
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628b856c21a52fd498f66120710291e4
+      internalID: 480679958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_32
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 64
+        width: 56
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9d04372f33d6e4eaff994304db1786
+      internalID: -118216324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_33
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 80
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99bbaa72a686a464cb4f43c2b3d0c883
+      internalID: 625407592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 58
+        width: 57
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d2373a87357fb42899b48b165f63b7
+      internalID: -1369866378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_35
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 52
+        width: 6
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdcd330259c6e2c4581ed5ef06a55993
+      internalID: 662337664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_beige_TileSet_36
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 6
+        width: 6
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a5fb898159d2e4d94be1209ad63754
+      internalID: -992987237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +883,44 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Buildings_beige_TileSet_0: -956672870
+      Buildings_beige_TileSet_1: -137850280
+      Buildings_beige_TileSet_10: 1297442033
+      Buildings_beige_TileSet_11: 635284005
+      Buildings_beige_TileSet_12: -1301707408
+      Buildings_beige_TileSet_13: 1490924032
+      Buildings_beige_TileSet_14: -776863053
+      Buildings_beige_TileSet_15: 1855895034
+      Buildings_beige_TileSet_16: -219888661
+      Buildings_beige_TileSet_17: -655687883
+      Buildings_beige_TileSet_18: -986635714
+      Buildings_beige_TileSet_19: -1805202928
+      Buildings_beige_TileSet_2: 229658015
+      Buildings_beige_TileSet_20: 1021672374
+      Buildings_beige_TileSet_21: -402112311
+      Buildings_beige_TileSet_22: 1532650112
+      Buildings_beige_TileSet_23: 150790646
+      Buildings_beige_TileSet_24: -1536168822
+      Buildings_beige_TileSet_25: 2036466359
+      Buildings_beige_TileSet_26: 690072108
+      Buildings_beige_TileSet_27: 1617566731
+      Buildings_beige_TileSet_28: -787773924
+      Buildings_beige_TileSet_29: 919381663
+      Buildings_beige_TileSet_3: -291192047
+      Buildings_beige_TileSet_30: -1563875710
+      Buildings_beige_TileSet_31: 480679958
+      Buildings_beige_TileSet_32: -118216324
+      Buildings_beige_TileSet_33: 625407592
+      Buildings_beige_TileSet_34: -1369866378
+      Buildings_beige_TileSet_35: 662337664
+      Buildings_beige_TileSet_36: -992987237
+      Buildings_beige_TileSet_4: -2005394044
+      Buildings_beige_TileSet_5: -570819443
+      Buildings_beige_TileSet_6: 1594091294
+      Buildings_beige_TileSet_7: -760122321
+      Buildings_beige_TileSet_8: 1619392250
+      Buildings_beige_TileSet_9: -515838636
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

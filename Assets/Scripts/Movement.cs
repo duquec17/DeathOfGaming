@@ -10,17 +10,25 @@ public class Movement : MonoBehaviour
 
     public float speed;
     public Animator animator;
+    private Vector3 direction;
 
     private void Update()
     {
+        // Gets direction player is moving in based on kep press
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        Vector3 direction = new Vector2(horizontal, vertical);
+        // Create normalized vector of the direction
+        direction = new Vector3(horizontal, vertical, 0);
 
         AnimateMovement(direction);
 
-        transform.position += direction * speed * Time.deltaTime;
+    }
+
+    private void FixedUpdate()
+    {
+        // Move the player
+        this.transform.position += direction * speed * Time.deltaTime;
     }
 
     void AnimateMovement(Vector3 direction)
