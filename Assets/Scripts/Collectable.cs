@@ -9,14 +9,21 @@ public class Collectable : MonoBehaviour
        - Delete collectable from the screen
     */
 
+    public CollectableType type;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Player player = collision.gameObject.GetComponent<Player>();
 
-        if (player != null)
+        if (player)
         {
-            player.Ammo++;
+            player.inventory.Add(type);
             Destroy(this.gameObject);
         }
     }
+}
+
+public enum CollectableType
+{
+    NONE, AMMO
 }
