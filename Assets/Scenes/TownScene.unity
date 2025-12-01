@@ -18978,6 +18978,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -212246354288758762, guid: ff6da5f2dce9216449f047cc8c45f942, type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -212246354288758762, guid: ff6da5f2dce9216449f047cc8c45f942, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1708242743105578558, guid: ff6da5f2dce9216449f047cc8c45f942, type: 3}
       propertyPath: m_Name
       value: Collectable

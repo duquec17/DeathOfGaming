@@ -13,13 +13,13 @@ public class Player : MonoBehaviour
 
     public void DropItem(Collectable item)
     {
-        Vector3 spawnLocation = transform.position;
+        Vector2 spawnLocation = transform.position;
 
-        float randX = Random.Range(-1f, 1f);
-        float randY = Random.Range(-1f, 1f);
+        Vector2 spawnOffset = Random.insideUnitCircle * 1.25f;
 
-        Vector3 spawnOffset = new Vector3(randX, randY, 0f).normalized;
+        Collectable droppedItem = Instantiate(item, spawnLocation + spawnOffset, 
+            Quaternion.identity);
 
-        Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+        droppedItem.rb2d.AddForce(spawnOffset * 0.2f, ForceMode2D.Impulse);
     }
 }

@@ -75,7 +75,7 @@ public class Inventory
             }
         }
 
-        foreach(Slot slot in slots)
+        foreach (Slot slot in slots)
         {
             if(slot.type == CollectableType.NONE)
             {

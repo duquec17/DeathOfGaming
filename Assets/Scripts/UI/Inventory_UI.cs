@@ -61,6 +61,7 @@ public class Inventory_UI : MonoBehaviour
 
         if (itemToDrop != null)
         {
+            player.DropItem(itemToDrop);
             player.inventory.Remove(slotID);
             Refresh();
         }
