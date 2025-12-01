@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     {
         Vector2 spawnLocation = transform.position;
 
-        Vector2 spawnOffset = Random.insideUnitCircle * 1.25f;
+        Vector2 spawnOffset = Random.insideUnitCircle * 1.75f;
 
         Collectable droppedItem = Instantiate(item, spawnLocation + spawnOffset, 
             Quaternion.identity);
