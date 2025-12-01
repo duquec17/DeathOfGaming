@@ -10,4 +10,16 @@ public class Player : MonoBehaviour
     {
         inventory = new Inventory(21);
     }
+
+    public void DropItem(Collectable item)
+    {
+        Vector3 spawnLocation = transform.position;
+
+        float randX = Random.Range(-1f, 1f);
+        float randY = Random.Range(-1f, 1f);
+
+        Vector3 spawnOffset = new Vector3(randX, randY, 0f).normalized;
+
+        Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+    }
 }

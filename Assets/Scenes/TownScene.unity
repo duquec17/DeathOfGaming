@@ -17942,6 +17942,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1583049639}
   - component: {fileID: 1583049638}
+  - component: {fileID: 1583049640}
+  - component: {fileID: 1583049641}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -17980,6 +17982,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1583049640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583049637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f8421ca5f9ef71468d59c1e8e05d40f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemManager: {fileID: 0}
+--- !u!114 &1583049641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583049637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc459c56de9f0143836916048a84f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectableItems:
+  - {fileID: 8616181326492564620, guid: ff6da5f2dce9216449f047cc8c45f942, type: 3}
 --- !u!1 &1630030767
 GameObject:
   m_ObjectHideFlags: 0
@@ -19153,7 +19182,7 @@ SceneRoots:
   - {fileID: 344496106}
   - {fileID: 1512273184}
   - {fileID: 1505724506}
-  - {fileID: 1583049639}
   - {fileID: 1004737335}
   - {fileID: 709063673}
   - {fileID: 2068880459}
+  - {fileID: 1583049639}
