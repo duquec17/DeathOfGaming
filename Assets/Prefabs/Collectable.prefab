@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 742074516219579298}
   - component: {fileID: 8616181326492564620}
   - component: {fileID: -212246354288758762}
+  - component: {fileID: 9081503376518341079}
   m_Layer: 0
   m_Name: Collectable
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -183578767, guid: f4daebdc3afcd49489718ae9f28323be, type: 3}
+  m_Sprite: {fileID: 1028277837, guid: f4daebdc3afcd49489718ae9f28323be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -144,9 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7640569a2786f7244951f1d4ddd02388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
-  icon: {fileID: -183578767, guid: f4daebdc3afcd49489718ae9f28323be, type: 3}
-  rb2d: {fileID: 0}
 --- !u!50 &-212246354288758762
 Rigidbody2D:
   serializedVersion: 4
@@ -174,3 +172,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &9081503376518341079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708242743105578558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c2b617e477d6d54a96f5993823385de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 168c0a3ac14b71940bef134f813802fb, type: 2}
+  rb2d: {fileID: 0}
