@@ -8,7 +8,7 @@ public class Inventory_UI : MonoBehaviour
 
     public Player player;
 
-    public List<Slots_UI> slots = new List<Slots_UI>();
+    public List<Slot_UI> slots = new List<Slot_UI>();
 
     public void Start()
     {
