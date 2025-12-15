@@ -5,10 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Inventory inventory;
-
+    public Inventory toolbar;
     private void Awake()
     {
+        // Need to change these values to match however many slots are given to the player
         inventory = new Inventory(24);
+        toolbar = new Inventory(3);
     }
 
     private void Update()

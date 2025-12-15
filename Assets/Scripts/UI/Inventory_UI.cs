@@ -22,8 +22,10 @@ public class Inventory_UI : MonoBehaviour
         canvas = FindObjectOfType<Canvas>();
     }
 
-    public void Start()
+    private void Start()
     {
+        SetupSlots();
+        Refresh();
         inventoryPanel.SetActive(false);
     }
 
@@ -47,26 +49,44 @@ public class Inventory_UI : MonoBehaviour
 
     public void ToggleInventory()
     {
-        if(!inventoryPanel.activeSelf)
+        if (inventoryPanel !=null)
         {
-            inventoryPanel.SetActive(true);
-            Refresh();
+            if(!inventoryPanel.activeSelf)
+            {
+                inventoryPanel.SetActive(true);
+                Refresh();
+            }
+            else
+            {
+                inventoryPanel.SetActive(false);
+            }
         }
-        else
-        {
-            inventoryPanel.SetActive(false);
-        }
+        
     }
 
     void Refresh()
     {
-        if(slots.Count == player.inventory.slots.Count)
+        if (slots.Count == player.inventory.slots.Count)
         {
             for(int i = 0; i < slots.Count; i++)
             {
                 if (player.inventory.slots[i].itemName != "")
                 {
                     slots[i].SetItem(player.inventory.slots[i]);
+                }
+                else
+                {
+                    slots[i].SetEmpty();
+                }
+            }
+        }
+        else if (slots.Count == player.toolbar.slots.Count)
+        {
+            for (int i = 0; i < slots.Count; i++)
+            {
+                if (player.toolbar.slots[i].itemName != "")
+                {
+                    slots[i].SetItem(player.toolbar.slots[i]);
                 }
                 else
                 {
@@ -128,7 +148,8 @@ public class Inventory_UI : MonoBehaviour
 
     public void SlotDrop(Slot_UI slot)
     {
-        Debug.Log("Dropped " + draggedSlot.name + " on " + slot.name);
+        player.inventory.MoveSlot(draggedSlot.slotID, slot.slotID);
+        Refresh();
     }
 
     private void MoveToMousePosition(GameObject toMove)
@@ -144,7 +165,16 @@ public class Inventory_UI : MonoBehaviour
         }
     }
 
+    void SetupSlots()
+    {
+        int counter  = 0;
 
+        foreach(Slot_UI slot in slots)
+        {
+            slot.slotID = counter;
+            counter++;
+        }
+    }
 
 
 
