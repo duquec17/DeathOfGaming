@@ -18,6 +18,11 @@ public class Toolbar_UI : MonoBehaviour
         CheckAlphaNumericKeys();
     }
 
+    public void SelectSlot(Slot_UI slot)
+    {
+        SelectSlot(slot.slotID);
+    }
+
     public void SelectSlot(int index)
     {
         if(toolbarSlots.Count == 3)
@@ -29,9 +34,14 @@ public class Toolbar_UI : MonoBehaviour
             selectedSlot = toolbarSlots[index];
             selectedSlot.SetHighlight(true);
             Debug.Log("Selected Slot: " + selectedSlot.name);
+
+            GameManager.instance.player.inventory.toolbar.SelectSlot(index);
+
+
         }
     }
 
+    // Will have player select item that is in matching slot number of tool bar (Ex: Press 1 and select item 1)
     private void CheckAlphaNumericKeys()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))

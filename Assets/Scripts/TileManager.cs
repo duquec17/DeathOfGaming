@@ -9,7 +9,7 @@ public class TileManager : MonoBehaviour
     [SerializeField] private Tilemap interactableMap;
 
     [SerializeField] private Tile hiddenInteractableTile;
-    [SerializeField] private Tile interactedTile;
+    [SerializeField] private Tile minedTile;
 
     // Start is called before the first frame update
     void Start()
@@ -25,23 +25,24 @@ public class TileManager : MonoBehaviour
         }
     }
 
-    public bool isInteractable(Vector3Int position)
-    {
-        TileBase tile = interactableMap.GetTile(position);
-
-        if(tile != null)
-        {
-            if(tile.name == "Interactable")
-            {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
     public void SetInteracted(Vector3Int position)
     {
-        interactableMap.SetTile(position, interactedTile);
+        interactableMap.SetTile(position, minedTile);
+    }
+
+    public string GetTileName(Vector3Int position)
+    {
+        if (interactableMap != null)
+        {
+            TileBase tile = interactableMap.GetTile(position);
+
+            if (tile != null)
+            {
+                return tile.name;
+            }
+
+        }
+
+            return "";
     }
 }

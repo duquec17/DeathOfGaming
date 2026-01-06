@@ -24,15 +24,17 @@ public class Player : MonoBehaviour
         {
             if (tileManager != null)
             {
-                Vector3Int position = new Vector3Int((int)transform.position.x, 
-                (int)transform.position.y, 0);
+                Vector3Int position = new Vector3Int((int)transform.position.x, (int)transform.position.y, 0);
 
-                if (GameManager.instance.tileManager.isInteractable(position))
+                string tileName = tileManager.GetTileName(position);
+
+                if (!string.IsNullOrWhiteSpace(tileName))
                 {
-                    Debug.Log("Tile is interactable");
-                    GameManager.instance.tileManager.SetInteracted(position);
+                    if (tileName == "Interactable" && inventory.toolbar.selectedSlot.itemName == "Pickaxe") // Name needs to match exactly or won't work
+                    {
+                        tileManager.SetInteracted(position);
+                    }
                 }
-
             }
         }
     }
