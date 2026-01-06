@@ -5,7 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public InventoryManager inventory;
-    
+    private TileManager tileManager;
+
+    private void Start()
+    {
+        tileManager = GameManager.instance.tileManager;
+    }
+
     private void Awake()
     {
         // Need to change these values to match however many slots are given to the player
@@ -16,13 +22,17 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space)) 
         {
-            Vector3Int position = new Vector3Int((int)transform.position.x, 
+            if (tileManager != null)
+            {
+                Vector3Int position = new Vector3Int((int)transform.position.x, 
                 (int)transform.position.y, 0);
 
-            if (GameManager.instance.tileManager.isInteractable(position))
-            {
-                Debug.Log("Tile is interactable");
-                GameManager.instance.tileManager.SetInteracted(position);
+                if (GameManager.instance.tileManager.isInteractable(position))
+                {
+                    Debug.Log("Tile is interactable");
+                    GameManager.instance.tileManager.SetInteracted(position);
+                }
+
             }
         }
     }
