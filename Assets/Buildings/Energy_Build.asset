@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22cb009533dfdac44b0e71eee8a95df7, type: 3}
+  m_Name: Energy_Build
+  m_EditorClassIdentifier: 
+  buildingName: Generator
+  prefab: {fileID: 4420473677717155733, guid: 4fd70257ceebc1f4c8557043d2462d11, type: 3}
+  icon: {fileID: 591912162, guid: 6d5ddd4183c296f4086df01230871b7e, type: 3}
+  resourceType: {fileID: 11400000, guid: 2fad45c772e18174f92a09fe23ba3fd5, type: 2}
+  resourceIncrease: 50
+  resourceCost: 0
