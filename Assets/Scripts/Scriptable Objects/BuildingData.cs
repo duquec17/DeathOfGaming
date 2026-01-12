@@ -7,8 +7,9 @@ public class BuildingData : ScriptableObject
 {
     public string buildingName = "Building Name";
     public GameObject prefab;
-    public float resourceIncrease;
     public Sprite icon;
-    public float resourceCost;
 
+    public ResourceData resourceType;
+    public float resourceIncrease;
+    public float resourceCost;
 }
