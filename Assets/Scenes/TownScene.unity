@@ -489,46 +489,36 @@ Tilemap:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69460359}
   m_Enabled: 1
-  m_Tiles:
-  - first: {x: -6, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
+  m_Tiles: {}
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 7a01a02ef861ddd4c97214a08ca3ad34, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: -1733877701, guid: ea503786a08c8d2418ad471b1366cb12, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
-  - m_RefCount: 1
+  - m_RefCount: 0
     m_Data:
-      e00: 1
+      e00: 6.7e-44
       e01: 0
-      e02: 0
-      e03: 0
+      e02: 3.0658509e-33
+      e03: -4.0657623e-19
       e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
+      e11: 0
+      e12: 2.07e-43
+      e13: 5.77e-43
+      e20: 0.75718975
+      e21: -2.5112845e-10
+      e22: 6.6376646e-29
+      e23: -2.0363846
+      e30: 4.5905e-41
+      e31: 5.8e-43
+      e32: 5.79e-43
+      e33: 5.8e-43
   m_TileColorArray:
-  - m_RefCount: 1
-    m_Data: {r: 1, g: 1, b: 1, a: 1}
+  - m_RefCount: 0
+    m_Data: {r: 4.0831e-41, g: 4.0831e-41, b: 4.0831e-41, a: 4.0831e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1613,7 +1603,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -54, y: 159}
+  m_AnchoredPosition: {x: -54, y: 417.00003}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &290345652
@@ -19347,7 +19337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -291, y: 159}
+  m_AnchoredPosition: {x: -291, y: 417}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1050669681
@@ -21237,19 +21227,57 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -23, y: 6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -13, y: 6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -13, y: 7, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: d8b58e83a1ed9094e9435cfbf4c84fb8, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 3c3133fcdec3d7142b47cbd5607e323f, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 262c8e8879e483546868d55810a68787, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: f6bea4901ce3b3341bbf865375d3fb54, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 4
     m_Data: {fileID: 21300000, guid: 22512cf7e5f61bc4397dd40abc13e13f, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -22887753, guid: ea503786a08c8d2418ad471b1366cb12, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1046391289, guid: ea503786a08c8d2418ad471b1366cb12, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -443130016, guid: ea503786a08c8d2418ad471b1366cb12, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 4
+  - m_RefCount: 7
     m_Data:
       e00: 1
       e01: 0
@@ -21268,13 +21296,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 4
+  - m_RefCount: 7
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -8, y: -4, z: 0}
-  m_Size: {x: 8, y: 7, z: 1}
+  m_Origin: {x: -23, y: -4, z: 0}
+  m_Size: {x: 23, y: 12, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -22152,7 +22180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 445, y: 159}
+  m_AnchoredPosition: {x: 445, y: 417.00003}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1630030769
@@ -22977,7 +23005,7 @@ GameObject:
   - component: {fileID: 1859329305}
   - component: {fileID: 1859329306}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: CliffCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23033,7 +23061,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -11.996005, y: 6.5541205}
+  - {x: -11.996005, y: 6.9982924}
   - {x: -11.9113865, y: 1.8147976}
   - {x: -12.459195, y: 1.7764155}
   - {x: -12.458964, y: 0.9603494}
@@ -23045,13 +23073,13 @@ EdgeCollider2D:
   - {x: -22.941912, y: 4.968723}
   - {x: -23.458971, y: 4.9318867}
   - {x: -23.46848, y: 5.9872494}
-  - {x: -23.484608, y: 6.925435}
-  - {x: -22.61243, y: 6.9612336}
+  - {x: -23.484608, y: 7.010853}
+  - {x: -22.544096, y: 7.0295677}
   - {x: -22.594078, y: 2.9446943}
   - {x: -12.893605, y: 2.8122232}
   - {x: -12.270123, y: 2.837805}
-  - {x: -12.313904, y: 6.5783167}
-  - {x: -12.008591, y: 6.599245}
+  - {x: -12.313904, y: 7.0224886}
+  - {x: -11.974423, y: 7.0263333}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -23174,7 +23202,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 193, y: 159}
+  m_AnchoredPosition: {x: 193, y: 417.00003}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2031945150
