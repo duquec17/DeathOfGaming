@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8423636815455089281}
   - component: {fileID: 6832489038643518428}
-  - component: {fileID: 7067463377113535686}
   - component: {fileID: 5110393636135839445}
   - component: {fileID: 7492602157797945514}
   m_Layer: 0
@@ -76,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d451715eff4740b428db6cffad4f2a91, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 119a6b640962c5640bb6e6e0eb6445fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,19 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7067463377113535686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4420473677717155733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e306015f59e634fbdf25d116aa7b0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  message: This is Segundo Sol Studio
 --- !u!61 &5110393636135839445
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -136,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.93, y: 2.09}
+    oldSize: {x: 0.8, y: 0.48}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
