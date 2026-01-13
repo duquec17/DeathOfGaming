@@ -34,4 +34,9 @@ public class Ruin_Converter : MonoBehaviour
             }
         }
     }
+
+   private void HideInfo()
+    {
+        buildMenuPanel.SetActive(false);
+    }
 }
