@@ -262,6 +262,8 @@ GameObject:
   m_Component:
   - component: {fileID: 603978324760438014}
   - component: {fileID: 2615098570743688025}
+  - component: {fileID: 1255092346373228439}
+  - component: {fileID: 7755212358495553579}
   m_Layer: 0
   m_Name: Ruin Container
   m_TagString: Untagged
@@ -342,6 +344,67 @@ PolygonCollider2D:
       - {x: 0.18418217, y: -0.5941124}
       - {x: 2.2916346, y: -0.59413004}
       - {x: 2.2904625, y: 0.5154943}
+  m_UseDelaunayMesh: 0
+--- !u!114 &1255092346373228439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7573578859556044246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87f4d1563cbe9045b41172256d69489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &7755212358495553579
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7573578859556044246}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -4.6630554, y: 0.73913}
+      - {x: -4.6638827, y: -3.7764158}
+      - {x: 2.57692, y: -3.7438066}
+      - {x: 2.4999733, y: 0.78184456}
   m_UseDelaunayMesh: 0
 --- !u!1 &8588416191698051913
 GameObject:

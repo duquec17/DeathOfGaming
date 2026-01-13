@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Wire-Fence_Opening_Sheet8_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 6
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b0f287f266166f41a3c318d46d9b84e
+      internalID: -992681261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire-Fence_Opening_Sheet8_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 5
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5feebc546914396498b963780d4fd7f0
+      internalID: -506755750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire-Fence_Opening_Sheet8_2
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 4
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488f10bfee1812b4ba4612f1d98ef2c5
+      internalID: 484337912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire-Fence_Opening_Sheet8_3
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ad8fc6d193b63408bb74a14014861c
+      internalID: -1789535460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire-Fence_Opening_Sheet8_4
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1
+        width: 5
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca2e2888e088bc42a3a72cf9e7b920d
+      internalID: -331995880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire-Fence_Opening_Sheet8_5
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552319ca7436ea74e9d4b766c6b72eaf
+      internalID: 1117285484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire-Fence_Opening_Sheet8_6
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1
+        width: 4
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7d29996dc503140a9a9f082872a1e4
+      internalID: -787189827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire-Fence_Opening_Sheet8_7
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 5
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14500d41c262b54da304e81e15a0c3d
+      internalID: 1945676209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire-Fence_Opening_Sheet8_8
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 5
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb748c91ab4e5b54fa5569203fbc89f0
+      internalID: -955781151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire-Fence_Opening_Sheet8_9
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 5
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39cb59988d15f7747af305c309c6606c
+      internalID: 273574628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire-Fence_Opening_Sheet8_10
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 0
+        width: 3
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c4e116c7a535742bc429e6a4ee53b2
+      internalID: -1680387338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire-Fence_Opening_Sheet8_11
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 0
+        width: 2
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58f2c36e10e93743b96e92875540b0f
+      internalID: -1990356200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +358,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wire-Fence_Opening_Sheet8_0: -992681261
+      Wire-Fence_Opening_Sheet8_1: -506755750
+      Wire-Fence_Opening_Sheet8_10: -1680387338
+      Wire-Fence_Opening_Sheet8_11: -1990356200
+      Wire-Fence_Opening_Sheet8_2: 484337912
+      Wire-Fence_Opening_Sheet8_3: -1789535460
+      Wire-Fence_Opening_Sheet8_4: -331995880
+      Wire-Fence_Opening_Sheet8_5: 1117285484
+      Wire-Fence_Opening_Sheet8_6: -787189827
+      Wire-Fence_Opening_Sheet8_7: 1945676209
+      Wire-Fence_Opening_Sheet8_8: -955781151
+      Wire-Fence_Opening_Sheet8_9: 273574628
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
