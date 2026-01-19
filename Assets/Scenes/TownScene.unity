@@ -22104,11 +22104,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8423636815455089281, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.35
+      value: -20.04
       objectReference: {fileID: 0}
     - target: {fileID: 8423636815455089281, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.25
+      value: -9.47
       objectReference: {fileID: 0}
     - target: {fileID: 8423636815455089281, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22236,8 +22236,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1583049639}
-  - component: {fileID: 1583049638}
   - component: {fileID: 1583049640}
+  - component: {fileID: 1583049638}
   - component: {fileID: 1583049641}
   - component: {fileID: 1583049642}
   - component: {fileID: 1583049643}
@@ -22295,6 +22295,7 @@ MonoBehaviour:
   itemManager: {fileID: 1583049641}
   tileManager: {fileID: 1583049642}
   uiManager: {fileID: 1583049643}
+  townBehaviour: {fileID: 1583049638}
   player: {fileID: 344496110}
 --- !u!114 &1583049641
 MonoBehaviour:

@@ -55,7 +55,7 @@ public class Ruin_Converter : MonoBehaviour
                 Debug.Log("Wait for player to select building");
                 break;
 
-            case 1: // Will create energy building
+            case 1: // Will create energy building to replace ruin location
                 Destroy(this.gameObject);
                 Instantiate(energyBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
                 

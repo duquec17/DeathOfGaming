@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public ItemManager itemManager;
     public TileManager tileManager;
     public UI_Manager uiManager;
+    public TownBehaviour townBehaviour;
 
     public Player player;
 
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
         itemManager = GetComponent<ItemManager>();
         tileManager = GetComponent<TileManager>();
         uiManager = GetComponent<UI_Manager>();
+        townBehaviour = GetComponent<TownBehaviour>();
 
         player = FindObjectOfType<Player>();
     }

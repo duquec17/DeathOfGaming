@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 6832489038643518428}
   - component: {fileID: 5110393636135839445}
   - component: {fileID: 7492602157797945514}
+  - component: {fileID: 8356579868560353385}
   m_Layer: 0
   m_Name: Energy_Build
   m_TagString: Untagged
@@ -244,6 +245,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &8356579868560353385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4420473677717155733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136fc9ff6d1ae61438a97061ffa208f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyIncrease: 25
+  defenseIncrease: 0
+  foodIncrease: 0
+  recordIncrease: 0
 --- !u!1 &6758138803376382798
 GameObject:
   m_ObjectHideFlags: 0

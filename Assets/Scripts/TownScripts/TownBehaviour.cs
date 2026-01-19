@@ -20,10 +20,10 @@ public class TownBehaviour : MonoBehaviour
     public TMP_Text rec_Text;
 
     // Variables that track all values once they're calculated
-    int total_DEF;
-    int total_ENG;
-    int total_FOOD;
-    int total_REC;
+    public int total_DEF;
+    public int total_ENG;
+    public int total_FOOD;
+    public int total_REC;
 
     // Base score for the first Player building
     int segundo_Sol_DEF = 50;
@@ -34,33 +34,17 @@ public class TownBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Calculates total def
-        def_Calculation();
+        // Display initial value of resources when loading scene
+        def_Text.text = "DEF:  " + total_DEF + segundo_Sol_DEF;
+        eng_Text.text = "ENG:  " + total_ENG + segundo_Sol_ENG;
+        food_Text.text = "FOOD:  " + total_FOOD + segundo_Sol_FOOD;
+        rec_Text.text = "REC:  " + total_REC + segundo_Sol_REC;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Updates 
-        def_Text.text = "DEF:  " + total_DEF;
-        eng_Text.text = "ENG:  " + total_ENG;
-        food_Text.text = "FOOD:  " + total_FOOD;
-        rec_Text.text = "REC:  " + total_REC;
-
-    }
-
-    public void def_Calculation()
-    {
-        // Calculates total def
-        total_DEF = total_DEF + segundo_Sol_DEF;
-        total_ENG = total_ENG + segundo_Sol_ENG;
-        total_FOOD = total_FOOD + segundo_Sol_FOOD;
-        total_REC = total_REC + segundo_Sol_REC;
-    }
-
-    public void DEFIncrease()
-    {
-        total_DEF = total_DEF + 20;
+        
     }
 }
