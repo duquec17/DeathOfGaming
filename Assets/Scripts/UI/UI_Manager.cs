@@ -22,6 +22,7 @@ public class UI_Manager : MonoBehaviour
 
     private void Update()
     {
+        // Open Inventory when tab or B button pressed
         if(Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.B))
         {
             ToggleInventoryUI();
