@@ -22104,11 +22104,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8423636815455089281, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.04
+      value: -5.37
       objectReference: {fileID: 0}
     - target: {fileID: 8423636815455089281, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.47
+      value: -3.31
       objectReference: {fileID: 0}
     - target: {fileID: 8423636815455089281, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22265,6 +22265,10 @@ MonoBehaviour:
   eng_Text: {fileID: 290345652}
   food_Text: {fileID: 2031945150}
   rec_Text: {fileID: 1630030769}
+  total_DEF: 0
+  total_ENG: 0
+  total_FOOD: 0
+  total_REC: 0
 --- !u!4 &1583049639
 Transform:
   m_ObjectHideFlags: 0

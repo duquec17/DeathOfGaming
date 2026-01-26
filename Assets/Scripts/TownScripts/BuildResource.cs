@@ -24,10 +24,13 @@ public class BuildResource : MonoBehaviour
         {
             Debug.Log("no manager");
         }
+
+        TownBehaviour town = FindObjectOfType<TownBehaviour>();
+        if (town != null) 
+        { 
+            town.AddResources(energyIncrease, defenseIncrease, foodIncrease, recordIncrease);
+        }
+        
     }
 
-    private void Update()
-    {
-        gmTownBehaviour.townBehaviour.total_ENG += energyIncrease;
-    }
 }
