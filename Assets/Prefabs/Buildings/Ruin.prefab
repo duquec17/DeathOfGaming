@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5110393636135839445}
   - component: {fileID: 7492602157797945514}
   - component: {fileID: 8037225744477319453}
+  - component: {fileID: 3802116737584017329}
   m_Layer: 0
   m_Name: Ruin
   m_TagString: Untagged
@@ -28,9 +29,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4420473677717155733}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.3099976, y: -3.35, z: 0}
-  m_LocalScale: {x: 0.92948383, y: 1.4871585, z: 0.045434}
+  m_LocalScale: {x: 1.1483506, y: 1.31792, z: 0.045434}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -158,7 +159,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!61 &8037225744477319453
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -204,3 +205,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.2662897, y: 4.4725294}
   m_EdgeRadius: 0
+--- !u!114 &3802116737584017329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4420473677717155733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb203b3e20add042b8160dc1108632a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildMenuPanel: {fileID: 2935607308828356461, guid: 04e6628423b2dbd428123497e9ec3aa9, type: 3}
+  menu: {fileID: 899729588573934121, guid: ce41e2e9e750ac54f90eb1af62170473, type: 3}
+  energyBuilding: {fileID: 4420473677717155733, guid: b23ca7d953ffd264cb883cf05b5a0e67, type: 3}
+  foodBuilding: {fileID: 0}
+  defenseBuilding: {fileID: 0}
+  recordBuilding: {fileID: 0}

@@ -7,7 +7,9 @@ using UnityEngine.UIElements;
 
 public class Ruin_Converter : MonoBehaviour
 {
+
     public GameObject buildMenuPanel;
+    [SerializeField] private BuildMenuController menu;
 
     [SerializeField] private GameObject energyBuilding;
     [SerializeField] private GameObject foodBuilding;
@@ -18,6 +20,7 @@ public class Ruin_Converter : MonoBehaviour
     void Start()
     {
         
+        //menu = GetComponent<BuildMenuController>();
     }
 
     // Update is called once per frame
@@ -29,7 +32,9 @@ public class Ruin_Converter : MonoBehaviour
     // When building clicked on will display information
     private void OnMouseDown()
     {
-        if (buildMenuPanel != null)
+        // Opens menu
+        menu.Open(this);
+        /*if (buildMenuPanel != null)
         {
             if (!buildMenuPanel.activeSelf)
             {
@@ -40,6 +45,7 @@ public class Ruin_Converter : MonoBehaviour
                 buildMenuPanel.SetActive(false);
             }
         }
+        */
     }
 
    private void HideInfo()
@@ -56,9 +62,10 @@ public class Ruin_Converter : MonoBehaviour
                 break;
 
             case 1: // Will create energy building to replace ruin location
-                Destroy(this.gameObject);
+                //Destroy(gameObject);
                 Instantiate(energyBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
-                
+                Destroy(gameObject);
+                menu.Close();
                 Debug.Log("making energy building");
                 break;
         }
