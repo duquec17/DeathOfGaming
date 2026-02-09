@@ -1690,7 +1690,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0032278746, y: -0.0048418343}
+  m_Offset: {x: -0.000000074505806, y: 0.0016140938}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1701,7 +1701,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.41897836, y: 0.8547446}
+  m_Size: {x: 0.38239476, y: 0.81600904}
   m_EdgeRadius: 0
 --- !u!114 &344496110
 MonoBehaviour:
@@ -6234,11 +6234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8423636815455089281, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.002265
+      value: -19.65
       objectReference: {fileID: 0}
     - target: {fileID: 8423636815455089281, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.299352
+      value: -9.86
       objectReference: {fileID: 0}
     - target: {fileID: 8423636815455089281, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20944,11 +20944,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8423636815455089281, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.37
+      value: -17.42
       objectReference: {fileID: 0}
     - target: {fileID: 8423636815455089281, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.31
+      value: 7.19
       objectReference: {fileID: 0}
     - target: {fileID: 8423636815455089281, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21880,7 +21880,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -956672870, guid: bc3458408e5f29645803b2e14af5bace, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
