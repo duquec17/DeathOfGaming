@@ -220,6 +220,6 @@ MonoBehaviour:
   buildMenuPanel: {fileID: 2935607308828356461, guid: 04e6628423b2dbd428123497e9ec3aa9, type: 3}
   menu: {fileID: 899729588573934121, guid: ce41e2e9e750ac54f90eb1af62170473, type: 3}
   energyBuilding: {fileID: 4420473677717155733, guid: b23ca7d953ffd264cb883cf05b5a0e67, type: 3}
-  foodBuilding: {fileID: 0}
+  foodBuilding: {fileID: 4420473677717155733, guid: 1bb7fea462a50714390a403ed9b0508f, type: 3}
   defenseBuilding: {fileID: 4420473677717155733, guid: 762f682383b375842a780790e1c9a777, type: 3}
-  recordBuilding: {fileID: 0}
+  recordBuilding: {fileID: 4420473677717155733, guid: 02624a691e2d964499a820b7d5f37670, type: 3}

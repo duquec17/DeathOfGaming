@@ -430,9 +430,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyIncrease: 0
-  defenseIncrease: 25
+  defenseIncrease: 0
   foodIncrease: 0
-  recordIncrease: 0
+  recordIncrease: 25
 --- !u!1 &5080346501493879629
 GameObject:
   m_ObjectHideFlags: 0
