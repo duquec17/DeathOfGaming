@@ -68,6 +68,30 @@ public class Ruin_Converter : MonoBehaviour
                 menu.Close();
                 Debug.Log("making energy building");
                 break;
+            
+            case 2: // Will create defense building to replace ruin location
+                //Destroy(gameObject);
+                Instantiate(defenseBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
+                Destroy(gameObject);
+                menu.Close();
+                Debug.Log("making defense building");
+                break;
+
+            case 3: // Will create food building to replace ruin location
+                //Destroy(gameObject);
+                Instantiate(foodBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
+                Destroy(gameObject);
+                menu.Close();
+                Debug.Log("making food building");
+                break;
+
+            case 4: // Will create record building to replace ruin location
+                //Destroy(gameObject);
+                Instantiate(recordBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
+                Destroy(gameObject);
+                menu.Close();
+                Debug.Log("making record building");
+                break;
         }
     }
 }
