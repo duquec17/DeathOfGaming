@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 119a6b640962c5640bb6e6e0eb6445fc
+guid: 72e9ead923da6be439e515782d66be7d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,202 +97,118 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wire-Fence_TileSet_0
+      name: Wooden-wall_Gates-openingH_closingV-Sheet7_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 0
-        width: 17
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8598979f0db0d7a408d7e7bf5e86c902
-      internalID: 108730253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wire-Fence_TileSet_1
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 16
-        width: 8
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d16106ac843c7284ea18340d6b49043d
-      internalID: 2101019009
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wire-Fence_TileSet_2
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 18
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee16f75e1da3c4d4a99f1be23b2dc644
-      internalID: -789304258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wire-Fence_TileSet_3
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 0
-        width: 46
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efa0a69b788984647b056b339018af71
-      internalID: -799831525
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wire-Fence_TileSet_4
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 8
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0ca97d781864b941910fd61301f6cfa
-      internalID: -1981320139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wire-Fence_TileSet_5
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
+        x: 0
+        y: 8
         width: 16
-        height: 32
+        height: 17
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 045dc84d472806145a5eeb4a5ee52048
-      internalID: -1059443096
+      spriteID: 4ddc3f469fd2d084f80ff9b005d2a51c
+      internalID: 1060190542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wire-Fence_TileSet_6
+      name: Wooden-wall_Gates-openingH_closingV-Sheet7_1
       rect:
         serializedVersion: 2
         x: 32
-        y: 16
-        width: 16
-        height: 32
+        y: 6
+        width: 13
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85a64003d370db54a8a13869a04968f3
-      internalID: 334395781
+      spriteID: 0110d37d48a9f724d82de432120e0866
+      internalID: 986747540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wire-Fence_TileSet_7
+      name: Wooden-wall_Gates-openingH_closingV-Sheet7_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 16
+        x: 48
+        y: 3
+        width: 10
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e2cb4113c53671478c204cd363ad55b
-      internalID: 542821286
+      spriteID: 95070cd089914d545875c38da13914d6
+      internalID: -117826346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wire-Fence_TileSet_8
+      name: Wooden-wall_Gates-openingH_closingV-Sheet7_3
       rect:
         serializedVersion: 2
         x: 64
-        y: 16
-        width: 9
-        height: 32
+        y: 1
+        width: 5
+        height: 22
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76db078fcfdb6a84287344bcd571b13c
-      internalID: 840839704
+      spriteID: c999da4ed7878314aa6c6f3041f6fdd6
+      internalID: 990177183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wire-Fence_TileSet_9
+      name: Wooden-wall_Gates-openingH_closingV-Sheet7_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 4
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b23069009ef9644aa8c89e0142aeab
+      internalID: 1147153043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wooden-wall_Gates-openingH_closingV-Sheet7_5
       rect:
         serializedVersion: 2
         x: 16
-        y: 32
-        width: 16
-        height: 16
+        y: 8
+        width: 15
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5239ae06642f9314291b50096adc5726
-      internalID: 1687202291
+      spriteID: b5599c1a7c2213f4383c159e83b9edf4
+      internalID: -1527965561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wire-Fence_TileSet_10
+      name: Wooden-wall_Gates-openingH_closingV-Sheet7_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
+        x: 96
+        y: 0
+        width: 3
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,8 +237,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16e42bf256fce2b44bee976f16f563eb
-      internalID: 1943343437
+      spriteID: 9166b261999aef94c9abedc64f08bff9
+      internalID: 489030532
       vertices: []
       indices: 
       edges: []
@@ -338,17 +254,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wire-Fence_TileSet_0: 108730253
-      Wire-Fence_TileSet_1: 2101019009
-      Wire-Fence_TileSet_10: 1943343437
-      Wire-Fence_TileSet_2: -789304258
-      Wire-Fence_TileSet_3: -799831525
-      Wire-Fence_TileSet_4: -1981320139
-      Wire-Fence_TileSet_5: -1059443096
-      Wire-Fence_TileSet_6: 334395781
-      Wire-Fence_TileSet_7: 542821286
-      Wire-Fence_TileSet_8: 840839704
-      Wire-Fence_TileSet_9: 1687202291
+      Wooden-wall_Gates-openingH_closingV-Sheet7_0: 1060190542
+      Wooden-wall_Gates-openingH_closingV-Sheet7_1: 986747540
+      Wooden-wall_Gates-openingH_closingV-Sheet7_2: -117826346
+      Wooden-wall_Gates-openingH_closingV-Sheet7_3: 990177183
+      Wooden-wall_Gates-openingH_closingV-Sheet7_4: 1147153043
+      Wooden-wall_Gates-openingH_closingV-Sheet7_5: -1527965561
+      Wooden-wall_Gates-openingH_closingV-Sheet7_6: 489030532
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
