@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [Header("Persistent Objects/Data")]
+    public GameObject[] persistentObjects; 
+
     public ItemManager itemManager;
     public TileManager tileManager;
     public UI_Manager uiManager;
@@ -22,9 +25,11 @@ public class GameManager : MonoBehaviour
         else
         {
             instance = this;
+            DontDestroyOnLoad(this.gameObject);
+            MarkPersistentObjects();
         }
 
-        DontDestroyOnLoad(this.gameObject);
+        
 
         itemManager = GetComponent<ItemManager>();
         tileManager = GetComponent<TileManager>();
@@ -32,5 +37,17 @@ public class GameManager : MonoBehaviour
         townBehaviour = GetComponent<TownBehaviour>();
 
         player = FindObjectOfType<Player>();
+    }
+
+    private void MarkPersistentObjects()
+    {
+        foreach (GameObject obj in persistentObjects) 
+        {
+            if(obj != null)
+            {
+                DontDestroyOnLoad(obj);
+
+            }
+        }
     }
 }
