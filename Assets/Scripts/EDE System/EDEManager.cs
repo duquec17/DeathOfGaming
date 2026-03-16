@@ -45,7 +45,7 @@ public class EDEManager : MonoBehaviour
         TriggerEvent(result);
     }
 
-    // Used for testing purposes *Allows for respin of event wheel
+    // Used for testing purposes *Allows for respin of event wheel by pressing R
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
@@ -115,7 +115,7 @@ public class EDEManager : MonoBehaviour
     {
         // spawn enemies, show dialogue, etc
         dialogueContainer.SetActive(true);
-        choice_1.text = "A1 Choice";
+        choice_1.text = "A1 Choice - Gain 25 Food";
         choice_2.text = "A2 Choice";
         choice_3.text = "A3 Choice";
     }
@@ -124,11 +124,27 @@ public class EDEManager : MonoBehaviour
     {
         // different event logic
         dialogueContainer.SetActive(true);
+        // spawn enemies, show dialogue, etc
+        dialogueContainer.SetActive(true);
+        choice_1.text = "B1 Choice - Gain 25 Food";
+        choice_2.text = "B2 Choice";
+        choice_3.text = "B3 Choice";
     }
 
     void TriggerEventC()
     {
         // another event
         dialogueContainer.SetActive(true);
+        // spawn enemies, show dialogue, etc
+        dialogueContainer.SetActive(true);
+        choice_1.text = "C1 Choice - Gain 25 Food";
+        choice_2.text = "C2 Choice";
+        choice_3.text = "C3 Choice";
+    }
+
+    public void EventAddFoodResource()
+    {
+        TownBehaviour.total_FOOD += 30;
+        Debug.Log("Current Food Total: " + TownBehaviour.total_FOOD);
     }
 }

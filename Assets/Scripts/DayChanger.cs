@@ -14,6 +14,8 @@ public class DayChanger : MonoBehaviour
     
     public void MoveToNextDay()
     {
+        Debug.Log("TownScene CALLED");
+
         SceneManager.LoadScene("TownScene");
     }
 }

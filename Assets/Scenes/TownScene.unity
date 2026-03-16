@@ -21494,6 +21494,7 @@ MonoBehaviour:
   - {fileID: 2138270716}
   - {fileID: 1004737333}
   - {fileID: 519420028}
+  - {fileID: 1622891395}
   itemManager: {fileID: 1583049641}
   tileManager: {fileID: 1583049642}
   uiManager: {fileID: 1583049643}

@@ -28,10 +28,10 @@ public class TownBehaviour : MonoBehaviour
     */
 
     // Variables that track all values once they're calculated
-    public static int total_DEF = 50;
-    public static int total_ENG = 50;
-    public static int total_FOOD = 50;
-    public static int total_REC = 50;
+    public static int total_DEF;
+    public static int total_ENG;
+    public static int total_FOOD;
+    public static int total_REC;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +44,14 @@ public class TownBehaviour : MonoBehaviour
         total_REC = total_REC + segundo_Sol_REC;
         */
 
+        def_Text.text = "DEF:  " + total_DEF;
+        eng_Text.text = "ENG:  " + total_ENG;
+        food_Text.text = "FOOD:  " + total_FOOD;
+        rec_Text.text = "REC:  " + total_REC;
+    }
+
+    private void Update()
+    {
         def_Text.text = "DEF:  " + total_DEF;
         eng_Text.text = "ENG:  " + total_ENG;
         food_Text.text = "FOOD:  " + total_FOOD;
