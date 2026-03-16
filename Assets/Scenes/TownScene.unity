@@ -21326,7 +21326,7 @@ Transform:
   m_GameObject: {fileID: 1512273183}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.4400024, y: 0.0010986328, z: 0}
+  m_LocalPosition: {x: -3.6, y: 0.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21444,7 +21444,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &1583049638
 MonoBehaviour:
@@ -21462,10 +21462,6 @@ MonoBehaviour:
   eng_Text: {fileID: 290345652}
   food_Text: {fileID: 2031945150}
   rec_Text: {fileID: 1630030769}
-  total_DEF: 0
-  total_ENG: 0
-  total_FOOD: 0
-  total_REC: 0
 --- !u!4 &1583049639
 Transform:
   m_ObjectHideFlags: 0
@@ -21493,7 +21489,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8421ca5f9ef71468d59c1e8e05d40f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  persistentObjects: []
+  persistentObjects:
+  - {fileID: 344496105}
+  - {fileID: 2138270716}
+  - {fileID: 1004737333}
+  - {fileID: 519420028}
   itemManager: {fileID: 1583049641}
   tileManager: {fileID: 1583049642}
   uiManager: {fileID: 1583049643}
@@ -23730,7 +23730,7 @@ GameObject:
   - component: {fileID: 2138270718}
   - component: {fileID: 2138270717}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: TownCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24269,12 +24269,12 @@ SceneRoots:
   - {fileID: 1512273184}
   - {fileID: 1004737335}
   - {fileID: 709063673}
-  - {fileID: 2068880459}
-  - {fileID: 352135218}
-  - {fileID: 619394802}
+  - {fileID: 1622891396}
   - {fileID: 519420032}
+  - {fileID: 352135218}
+  - {fileID: 2068880459}
+  - {fileID: 619394802}
   - {fileID: 1505724506}
   - {fileID: 7759180572351344400}
   - {fileID: 654966111}
   - {fileID: 1444239714}
-  - {fileID: 1622891396}

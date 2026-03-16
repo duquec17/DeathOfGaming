@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
     {
         if(instance != null && instance != this)
         {
-            Destroy(this.gameObject);
+            CleanUpAndDestroy();
+            //Destroy(this.gameObject);
         }
         else
         {
@@ -49,5 +50,15 @@ public class GameManager : MonoBehaviour
 
             }
         }
+    }
+
+    private void CleanUpAndDestroy()
+    {
+        foreach (GameObject obj in persistentObjects)
+        {
+            Destroy(obj);
+        }
+
+        Destroy(gameObject);
     }
 }
