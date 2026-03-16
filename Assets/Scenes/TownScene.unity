@@ -23393,17 +23393,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031945148}
   m_CullTransparentMesh: 1
---- !u!114 &2035808384 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3802116737584017329, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
-  m_PrefabInstance: {fileID: 1572315788}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb203b3e20add042b8160dc1108632a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2035808389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8423636815455089281, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
@@ -23922,9 +23911,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4585131053609410059, guid: 3f325e9a68d95e245b99e03201003c0c, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4585131053609410059, guid: 3f325e9a68d95e245b99e03201003c0c, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2035808384}
+      objectReference: {fileID: 102900000, guid: 0851605490a599b46b6ac5cb681d93ea, type: 3}
+    - target: {fileID: 4585131053609410059, guid: 3f325e9a68d95e245b99e03201003c0c, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4585131053609410059, guid: 3f325e9a68d95e245b99e03201003c0c, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4585131053609410059, guid: 3f325e9a68d95e245b99e03201003c0c, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
