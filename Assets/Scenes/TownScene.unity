@@ -6426,9 +6426,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1575413214}
     - target: {fileID: 3802116737584017329, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
+      propertyPath: cloneBuilding
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802116737584017329, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: buildMenuPanel
       value: 
       objectReference: {fileID: 1575413210}
+    - target: {fileID: 3802116737584017329, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
+      propertyPath: parentObjectTransform
+      value: 
+      objectReference: {fileID: 1622891396}
     - target: {fileID: 4420473677717155733, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_Name
       value: Ruin (1)
@@ -20887,9 +20895,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1575413214}
     - target: {fileID: 3802116737584017329, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
+      propertyPath: cloneBuilding
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802116737584017329, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: buildMenuPanel
       value: 
       objectReference: {fileID: 1575413210}
+    - target: {fileID: 3802116737584017329, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
+      propertyPath: parentObjectTransform
+      value: 
+      objectReference: {fileID: 1622891396}
     - target: {fileID: 4420473677717155733, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_Name
       value: Ruin (2)
@@ -21345,9 +21361,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1575413214}
     - target: {fileID: 3802116737584017329, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
+      propertyPath: cloneBuilding
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802116737584017329, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: buildMenuPanel
       value: 
       objectReference: {fileID: 1575413210}
+    - target: {fileID: 3802116737584017329, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
+      propertyPath: parentObjectTransform
+      value: 
+      objectReference: {fileID: 1622891396}
     - target: {fileID: 4420473677717155733, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_Name
       value: Ruin
@@ -23210,6 +23234,10 @@ PrefabInstance:
       propertyPath: buildMenuPanel
       value: 
       objectReference: {fileID: 1575413210}
+    - target: {fileID: 3802116737584017329, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
+      propertyPath: parentObjectTransform
+      value: 
+      objectReference: {fileID: 1622891396}
     - target: {fileID: 4420473677717155733, guid: 0f98436c776218a448f65412cfcee80b, type: 3}
       propertyPath: m_Name
       value: Ruin (3)

@@ -11,6 +11,9 @@ public class Ruin_Converter : MonoBehaviour
     public GameObject buildMenuPanel;
     [SerializeField] private BuildMenuController menu;
 
+    [SerializeField] private Transform parentObjectTransform;
+
+    [SerializeField] private GameObject cloneBuilding;
     [SerializeField] private GameObject energyBuilding;
     [SerializeField] private GameObject foodBuilding;
     [SerializeField] private GameObject defenseBuilding;
@@ -48,7 +51,8 @@ public class Ruin_Converter : MonoBehaviour
         */
     }
 
-   private void HideInfo()
+    // Causes build menu to disappear after done using it
+    private void HideInfo()
     {
         buildMenuPanel.SetActive(false);
     }
@@ -63,32 +67,36 @@ public class Ruin_Converter : MonoBehaviour
 
             case 1: // Will create energy building to replace ruin location
                 //Destroy(gameObject);
-                Instantiate(energyBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
+                cloneBuilding = Instantiate(energyBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
                 Destroy(gameObject);
+                cloneBuilding.transform.parent = parentObjectTransform; // Places the new building into the container so it's saved
                 menu.Close();
                 Debug.Log("making energy building");
                 break;
             
-            case 2: // Will create defense building to replace ruin location
+            case 2: // Will create defense building to destroy ruin location
                 //Destroy(gameObject);
-                Instantiate(defenseBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
+                cloneBuilding = Instantiate(defenseBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
                 Destroy(gameObject);
+                cloneBuilding.transform.parent = parentObjectTransform;
                 menu.Close();
                 Debug.Log("making defense building");
                 break;
 
             case 3: // Will create food building to replace ruin location
                 //Destroy(gameObject);
-                Instantiate(foodBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
+                cloneBuilding = Instantiate(foodBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
                 Destroy(gameObject);
+                cloneBuilding.transform.parent = parentObjectTransform;
                 menu.Close();
                 Debug.Log("making food building");
                 break;
 
             case 4: // Will create record building to replace ruin location
                 //Destroy(gameObject);
-                Instantiate(recordBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
+                cloneBuilding = Instantiate(recordBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
                 Destroy(gameObject);
+                cloneBuilding.transform.parent = parentObjectTransform;
                 menu.Close();
                 Debug.Log("making record building");
                 break;
