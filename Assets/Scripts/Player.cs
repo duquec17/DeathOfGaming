@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        // Interact with marked tiles by pressing space
         if(Input.GetKeyDown(KeyCode.Space)) 
         {
             if (tileManager != null)
@@ -37,6 +39,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
+        
     }
 
     public void DropItem(Item item)

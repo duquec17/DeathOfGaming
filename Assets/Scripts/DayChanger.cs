@@ -5,6 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class DayChanger : MonoBehaviour
 {
+    public Player player;
+
+    public void Awake()
+    {
+        player = FindObjectOfType<Player>();
+    }
+
+    public void Update()
+    {
+        
+    }
+
     public void DayShift()
     {
         Debug.Log("DayShift CALLED");
@@ -17,5 +29,8 @@ public class DayChanger : MonoBehaviour
         Debug.Log("TownScene CALLED");
 
         SceneManager.LoadScene("TownScene");
+
+        //GameManager.instance.gameObject.SetActive(false);
+        //player.gameObject.SetActive(true);
     }
 }

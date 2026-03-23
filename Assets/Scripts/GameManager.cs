@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class GameManager : MonoBehaviour
     public TownBehaviour townBehaviour;
 
     public Player player;
+    public List <BuildingData> buildingData;
+    public int currentDay;
+    public string sceneName;
 
     private void Awake()
     {
@@ -33,11 +37,35 @@ public class GameManager : MonoBehaviour
         
 
         itemManager = GetComponent<ItemManager>();
-        tileManager = GetComponent<TileManager>();
+        tileManager = GetComponent<TileManager>(); // May need to remove
         uiManager = GetComponent<UI_Manager>();
         townBehaviour = GetComponent<TownBehaviour>();
 
+        // Might have to remove along with variable itself and redo the inventory system from scratch
         player = FindObjectOfType<Player>();
+    }
+
+    public void Update()
+    {
+        // Makes player invisible based on current scene and unusuable
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+
+        if (sceneName == "TownScene")
+        {
+            for (int i = 0; i < persistentObjects.Length -1; i++)
+            {
+                persistentObjects[i].SetActive(true);
+            }
+        }
+        else if (sceneName == "EndDayEvent")
+        {
+            for (int i = 0; i < persistentObjects.Length - 1; i++)
+            {
+                persistentObjects[i].SetActive(false);
+            }
+                
+        }
     }
 
     private void MarkPersistentObjects()
@@ -47,7 +75,6 @@ public class GameManager : MonoBehaviour
             if(obj != null)
             {
                 DontDestroyOnLoad(obj);
-
             }
         }
     }

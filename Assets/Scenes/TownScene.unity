@@ -20601,6 +20601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85fe2541e92cc748a847d8a900e225f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 344496110}
 --- !u!1001 &1345179819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21514,16 +21515,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   persistentObjects:
-  - {fileID: 344496105}
   - {fileID: 2138270716}
+  - {fileID: 344496105}
+  - {fileID: 1622891395}
   - {fileID: 1004737333}
   - {fileID: 519420028}
-  - {fileID: 1622891395}
   itemManager: {fileID: 1583049641}
   tileManager: {fileID: 1583049642}
   uiManager: {fileID: 1583049643}
   townBehaviour: {fileID: 1583049638}
   player: {fileID: 344496110}
+  buildingData: []
+  currentDay: 0
+  sceneName: 
 --- !u!114 &1583049641
 MonoBehaviour:
   m_ObjectHideFlags: 0
