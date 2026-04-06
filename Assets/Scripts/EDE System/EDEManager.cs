@@ -121,8 +121,12 @@ public class EDEManager : MonoBehaviour
         dialogueContainer.SetActive(true);
         choice_1.text = "A1 Choice - Gain 30 Food";
         choiceOne.onClick.AddListener(EventAddFoodResource);
-        choice_2.text = "A2 Choice";
+        
+        choice_2.text = "A2 Choice - Exchange 20 Energy for 20 Def";
+        choiceTwo.onClick.AddListener(ExchangeResource);
+
         choice_3.text = "A3 Choice - Skip";
+        choiceThree.onClick.AddListener(SkipDay);
 
     }
 
@@ -132,8 +136,11 @@ public class EDEManager : MonoBehaviour
         dialogueContainer.SetActive(true);
         choice_1.text = "B1 Choice - Gain 30 Energy";
         choiceOne.onClick.AddListener(EventAddEnergyResource);
+        
         choice_2.text = "B2 Choice";
+        
         choice_3.text = "B3 Choice  - Skip";
+        choiceThree.onClick.AddListener(SkipDay);
     }
 
     void TriggerEventC()
@@ -142,8 +149,11 @@ public class EDEManager : MonoBehaviour
         dialogueContainer.SetActive(true);
         choice_1.text = "C1 Choice - Gain 30 Defense";
         choiceOne.onClick.AddListener(EventAddDefenseResource);
+        
         choice_2.text = "C2 Choice";
+
         choice_3.text = "C3 Choice  - Skip";
+        choiceThree.onClick.AddListener(SkipDay);
     }
 
     public void EventAddFoodResource()
@@ -163,4 +173,16 @@ public class EDEManager : MonoBehaviour
         TownBehaviour.total_DEF += 30;
         Debug.Log("Current Defense Total: " + TownBehaviour.total_DEF);
     }
+
+    public void SkipDay()
+    {
+        dialogueContainer.SetActive(false);
+    }
+
+    public void ExchangeResource()
+    {
+        
+    }
+
+
 }

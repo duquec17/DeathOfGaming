@@ -543,7 +543,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 439438162}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &439438162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,7 +701,6 @@ MonoBehaviour:
   player: {fileID: 0}
   buildingData:
   - {fileID: 0}
-  currentDay: 0
   sceneName: 
 --- !u!4 &460342060
 Transform:
@@ -1188,6 +1199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  currentDay: {fileID: 1812747023}
 --- !u!114 &1019077500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2414,13 +2426,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 526443152}
+  - {fileID: 558714313}
   - {fileID: 201772768}
   - {fileID: 1863390976}
   - {fileID: 1230515060}
   - {fileID: 1538266584}
   - {fileID: 1629454341}
   - {fileID: 821655372}
-  - {fileID: 558714313}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

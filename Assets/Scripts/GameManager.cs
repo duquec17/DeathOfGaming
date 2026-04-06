@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     public Player player;
     public List <BuildingData> buildingData;
-    public int currentDay;
+    public static int currentDay = 1;
     public string sceneName;
 
     private void Awake()
