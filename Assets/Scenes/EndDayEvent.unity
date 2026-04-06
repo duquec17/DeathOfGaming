@@ -411,13 +411,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1319898621}
-        m_TargetAssemblyTypeName: EDEManager, Assembly-CSharp
-        m_MethodName: EventAddFoodResource
+      - m_Target: {fileID: 1319898619}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1413,6 +1413,9 @@ MonoBehaviour:
   totalChance: 1
   eventResult: 0
   dialogueContainer: {fileID: 1629454340}
+  choiceOne: {fileID: 341198627}
+  choiceTwo: {fileID: 1325497831}
+  choiceThree: {fileID: 439438161}
   event_NPC_Name: {fileID: 278746519}
   event_NPC_Dialogue: {fileID: 1618136386}
   choice_1: {fileID: 1411742429}
