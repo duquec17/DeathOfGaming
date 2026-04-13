@@ -25,9 +25,13 @@ public class EDEManager : MonoBehaviour
 
     ProbMenu<WheelEvent> eventMenu = new ProbMenu<WheelEvent>();
 
-    // Variable for 
+    // Int Variable 
     public float totalChance = 1.0f;
     public float eventResult;
+
+    // Determine highest and lowest resource
+    int highestRes = Math.Max(TownBehaviour.total_DEF, Math.Max(TownBehaviour.total_ENG, TownBehaviour.total_FOOD));
+    int lowestRes = Math.Min(TownBehaviour.total_DEF, Math.Min(TownBehaviour.total_ENG, TownBehaviour.total_FOOD));
 
     public GameObject dialogueContainer;
     public Button choiceOne, choiceTwo, choiceThree;
@@ -37,6 +41,7 @@ public class EDEManager : MonoBehaviour
     public TMP_Text choice_1;
     public TMP_Text choice_2;
     public TMP_Text choice_3;
+
 
     // On scene start spin wheel
     void Start()
@@ -122,7 +127,7 @@ public class EDEManager : MonoBehaviour
         choice_1.text = "A1 Choice - Gain 30 Food";
         choiceOne.onClick.AddListener(EventAddFoodResource);
         
-        choice_2.text = "A2 Choice - Exchange 20 Energy for 20 Def";
+        choice_2.text = "A2 Choice - Exchange 20 highest resource for 10 lowest resource";
         choiceTwo.onClick.AddListener(ExchangeResource);
 
         choice_3.text = "A3 Choice - Skip";
@@ -139,7 +144,7 @@ public class EDEManager : MonoBehaviour
         
         choice_2.text = "B2 Choice";
         
-        choice_3.text = "B3 Choice  - Skip";
+        choice_3.text = "B3 Choice - Skip";
         choiceThree.onClick.AddListener(SkipDay);
     }
 
@@ -152,7 +157,7 @@ public class EDEManager : MonoBehaviour
         
         choice_2.text = "C2 Choice";
 
-        choice_3.text = "C3 Choice  - Skip";
+        choice_3.text = "C3 Choice - Skip";
         choiceThree.onClick.AddListener(SkipDay);
     }
 
@@ -181,7 +186,42 @@ public class EDEManager : MonoBehaviour
 
     public void ExchangeResource()
     {
-        
+        // Takeaway from highest resource
+        if (highestRes == TownBehaviour.total_DEF)
+        {
+            TownBehaviour.total_DEF = TownBehaviour.total_DEF - 20;
+            Debug.Log("Exchanged def");
+        } 
+        else if(highestRes == TownBehaviour.total_FOOD)
+        {
+            TownBehaviour.total_FOOD = TownBehaviour.total_FOOD - 20;
+            Debug.Log("Exchanged food");
+        }
+        else if(highestRes == TownBehaviour.total_ENG)
+        {
+            TownBehaviour.total_ENG = TownBehaviour.total_ENG - 20;
+            Debug.Log("Exchanged ENG");
+        }
+
+        // Add same value taken from highest resource to lower
+        if (lowestRes == TownBehaviour.total_DEF)
+        {
+            TownBehaviour.total_DEF = TownBehaviour.total_DEF + 10;
+            Debug.Log("Exchanged def");
+        }
+        else if (lowestRes == TownBehaviour.total_FOOD)
+        {
+            TownBehaviour.total_FOOD = TownBehaviour.total_FOOD + 10;
+            Debug.Log("Exchanged food");
+        }
+        else if (lowestRes == TownBehaviour.total_ENG)
+        {
+            TownBehaviour.total_ENG = TownBehaviour.total_ENG + 10;
+            Debug.Log("Exchanged ENG");
+
+        }
+
+
     }
 
 
