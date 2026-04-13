@@ -99,17 +99,20 @@ public class EDEManager : MonoBehaviour
         switch (e)
         {
             case WheelEvent.Nothing:
-                Debug.Log("Nothing happened. Next day.");
+                event_NPC_Name.text = "A Sunny Day";
+                event_NPC_Dialogue.text = "An uneventful, but peaceful day. Should turn for the night.";
                 dialogueContainer.SetActive(false);
                 break;
 
             case WheelEvent.EventA:
-                Debug.Log("Trigger Event A");
+                event_NPC_Name.text = "A Gardener's Respite";
+                event_NPC_Dialogue.text = "Hello there, my name is Mariana. A simple lady that wants to see all flowers";
                 TriggerEventA();
                 break;
 
             case WheelEvent.EventB:
-                Debug.Log("Trigger Event B");
+                event_NPC_Name.text = "A Thief's Opportunity";
+                event_NPC_Dialogue.text = "An uneventful, but peaceful day. Should turn for the night.";
                 TriggerEventB();
                 break;
 
