@@ -111,8 +111,8 @@ public class EDEManager : MonoBehaviour
                 break;
 
             case WheelEvent.EventB:
-                event_NPC_Name.text = "A Thief's Opportunity";
-                event_NPC_Dialogue.text = "An uneventful, but peaceful day. Should turn for the night.";
+                event_NPC_Name.text = "An Unseen Opportunity";
+                event_NPC_Dialogue.text = "A friendly man walks towards you introducing himself as Albert. He proclaims he is a scientist and offers a chance to try one of his inventions.";
                 TriggerEventB();
                 break;
 
@@ -123,6 +123,7 @@ public class EDEManager : MonoBehaviour
         }
     }
 
+    // Gardener's Event
     void TriggerEventA()
     {
         // spawn enemies, show dialogue, etc
@@ -145,15 +146,16 @@ public class EDEManager : MonoBehaviour
         choice_1.text = "B1 Choice - Gain 30 Energy";
         choiceOne.onClick.AddListener(EventAddEnergyResource);
         
-        choice_2.text = "B2 Choice";
-        
+        choice_2.text = "B2 Choice - Suggest that a true scientist would try it on himself";
+        choiceOne.onClick.AddListener(HealthDebuffEvent);
+
         choice_3.text = "B3 Choice - Skip";
         choiceThree.onClick.AddListener(SkipDay);
     }
 
     void TriggerEventC()
     {
-        // another event
+        // another event++
         dialogueContainer.SetActive(true);
         choice_1.text = "C1 Choice - Gain 30 Defense";
         choiceOne.onClick.AddListener(EventAddDefenseResource);
@@ -227,5 +229,8 @@ public class EDEManager : MonoBehaviour
 
     }
 
-
+    public void HealthDebuffEvent()
+    {
+        Debug.Log("Will create logic to lower max HP");
+    }
 }
