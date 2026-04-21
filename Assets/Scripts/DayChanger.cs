@@ -34,15 +34,23 @@ public class DayChanger : MonoBehaviour
 
         GameManager.currentDay += 1;
 
-        // Switch to end game scene if reach the eight day
-        if (GameManager.currentDay >= 8)
+        // Ends game is specified stat is 0 or lower.
+        if (TownBehaviour.total_FOOD == 0)
         {
-            //
+            Debug.Log("Game over, died from X");
+            SceneManager.LoadScene("GameOver");
         }
-
-        SceneManager.LoadScene("TownScene");
-
-        //GameManager.instance.gameObject.SetActive(false);
-        //player.gameObject.SetActive(true);
+        else if (GameManager.currentDay >= 8 && TownBehaviour.total_REC < 100)
+        {
+            Debug.Log("Failed to obtain record");
+            SceneManager.LoadScene("GameOver");
+        }
+        else if (GameManager.currentDay >= 8)
+        {
+            // Switches to Game End/Win if survived til last day
+            SceneManager.LoadScene("GameEnd");
+        }
+        else // Switches back to town whenever ending a day, surviving, and not the last day
+            SceneManager.LoadScene("TownScene");
     }
 }
