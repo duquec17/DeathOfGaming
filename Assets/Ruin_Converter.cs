@@ -61,42 +61,64 @@ public class Ruin_Converter : MonoBehaviour
     {
         switch (index)
         {
-            case 0: // Should do nothing
+            case 0: // Should do nothing i.e. Select building button
                 Debug.Log("Wait for player to select building");
                 break;
 
-            case 1: // Will create energy building to replace ruin location
-                //Destroy(gameObject);
-                cloneBuilding = Instantiate(energyBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
-                Destroy(gameObject);
-                cloneBuilding.transform.parent = parentObjectTransform; // Places the new building into the container so it's saved
+            case 1: // Will create ENERGY building to replace ruin location
+                if (TownBehaviour.total_DEF >= 25)
+                {
+                    TownBehaviour.total_DEF -= 25;
+                    cloneBuilding = Instantiate(energyBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
+                    Destroy(gameObject);
+                    cloneBuilding.transform.parent = parentObjectTransform; // Places the new building into the container so it's saved
+                }
+                
                 menu.Close();
                 Debug.Log("making energy building");
                 break;
             
             case 2: // Will create defense building to destroy ruin location
-                //Destroy(gameObject);
-                cloneBuilding = Instantiate(defenseBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
-                Destroy(gameObject);
-                cloneBuilding.transform.parent = parentObjectTransform;
+                
+                if (TownBehaviour.total_ENG >= 25)
+                {
+                    TownBehaviour.total_ENG -= 25;
+                    cloneBuilding = Instantiate(defenseBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
+                    Destroy(gameObject);
+                    cloneBuilding.transform.parent = parentObjectTransform;
+                    
+                }
                 menu.Close();
                 Debug.Log("making defense building");
                 break;
 
             case 3: // Will create food building to replace ruin location
-                //Destroy(gameObject);
-                cloneBuilding = Instantiate(foodBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
-                Destroy(gameObject);
-                cloneBuilding.transform.parent = parentObjectTransform;
+
+                if (TownBehaviour.total_DEF >= 25)
+                {
+                    TownBehaviour.total_DEF -= 25;
+                    cloneBuilding = Instantiate(foodBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
+                    Destroy(gameObject);
+                    cloneBuilding.transform.parent = parentObjectTransform;
+                }
                 menu.Close();
                 Debug.Log("making food building");
                 break;
 
             case 4: // Will create record building to replace ruin location
-                //Destroy(gameObject);
-                cloneBuilding = Instantiate(recordBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
-                Destroy(gameObject);
-                cloneBuilding.transform.parent = parentObjectTransform;
+                
+                if (TownBehaviour.total_ENG >= 25 && TownBehaviour.total_DEF >= 25 && TownBehaviour.total_FOOD >= 25)
+                {
+                    // Record building payment cost
+                    TownBehaviour.total_DEF -= 25;
+                    TownBehaviour.total_FOOD -= 25;
+                    TownBehaviour.total_ENG -= 25;
+
+                    cloneBuilding = Instantiate(recordBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
+                    Destroy(gameObject);
+                    cloneBuilding.transform.parent = parentObjectTransform;
+                }
+                
                 menu.Close();
                 Debug.Log("making record building");
                 break;

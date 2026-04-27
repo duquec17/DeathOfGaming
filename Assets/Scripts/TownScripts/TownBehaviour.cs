@@ -19,18 +19,11 @@ public class TownBehaviour : MonoBehaviour
     public TMP_Text food_Text;
     public TMP_Text rec_Text;
 
-    // Base score for the first Player building
-    /* 
-    int segundo_Sol_DEF = 50;
-    int segundo_Sol_ENG = 50;
-    int segundo_Sol_FOOD = 50;
-    int segundo_Sol_REC = 50;
-    */
-
+    // Base score for the Player building
     // Variables that track all values once they're calculated
-    public static int total_DEF;
-    public static int total_ENG;
-    public static int total_FOOD;
+    public static int total_DEF = 25;
+    public static int total_ENG = 25;
+    public static int total_FOOD = 25;
     public static int total_REC;
 
     // Start is called before the first frame update

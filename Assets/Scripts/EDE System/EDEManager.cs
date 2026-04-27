@@ -106,18 +106,18 @@ public class EDEManager : MonoBehaviour
 
             case WheelEvent.EventA:
                 event_NPC_Name.text = "A Gardener's Respite";
-                event_NPC_Dialogue.text = "Hello there, my name is Mariana. A simple lady that wants to see all flowers";
+                event_NPC_Dialogue.text = "Hello there, my name is Samari. A simple enjoyer of flora, hoping to spread them around";
                 TriggerEventA();
                 break;
 
             case WheelEvent.EventB:
                 event_NPC_Name.text = "An Unseen Opportunity";
-                event_NPC_Dialogue.text = "A friendly man walks towards you introducing himself as Albert. He proclaims he is a scientist and offers a chance to try one of his inventions.";
+                event_NPC_Dialogue.text = "A 'friendly' man walks towards you introducing himself as Albert. He proclaims he is a scientist and offers a chance to try one of his serums.";
                 TriggerEventB();
                 break;
 
             case WheelEvent.EventC:
-                Debug.Log("Trigger Event C");
+                Debug.Log("The ");
                 TriggerEventC();
                 break;
         }
@@ -147,7 +147,7 @@ public class EDEManager : MonoBehaviour
         choiceOne.onClick.AddListener(EventAddEnergyResource);
         
         choice_2.text = "B2 Choice - Suggest that a true scientist would try it on himself";
-        choiceOne.onClick.AddListener(HealthDebuffEvent);
+        choiceTwo.onClick.AddListener(HealthDebuffEvent);
 
         choice_3.text = "B3 Choice - Skip";
         choiceThree.onClick.AddListener(SkipDay);
@@ -161,6 +161,7 @@ public class EDEManager : MonoBehaviour
         choiceOne.onClick.AddListener(EventAddDefenseResource);
         
         choice_2.text = "C2 Choice";
+        choiceTwo.onClick.AddListener(EventAddDefenseResource);
 
         choice_3.text = "C3 Choice - Skip";
         choiceThree.onClick.AddListener(SkipDay);
@@ -169,18 +170,21 @@ public class EDEManager : MonoBehaviour
     public void EventAddFoodResource()
     {
         TownBehaviour.total_FOOD += 30;
+        dialogueContainer.SetActive(false);
         Debug.Log("Current Food Total: " + TownBehaviour.total_FOOD);
     }
 
     public void EventAddEnergyResource()
     {
         TownBehaviour.total_ENG += 30;
+        dialogueContainer.SetActive(false);
         Debug.Log("Current Energy Total: " + TownBehaviour.total_ENG);
     }
 
     public void EventAddDefenseResource()
     {
         TownBehaviour.total_DEF += 30;
+        dialogueContainer.SetActive(false);
         Debug.Log("Current Defense Total: " + TownBehaviour.total_DEF);
     }
 
@@ -226,11 +230,17 @@ public class EDEManager : MonoBehaviour
 
         }
 
-
+        dialogueContainer.SetActive(false);
     }
 
     public void HealthDebuffEvent()
     {
-        Debug.Log("Will create logic to lower max HP");
+        Debug.Log("Will cause resource loss and no gain");
+        event_NPC_Dialogue.text = "Albert in a rapid movement forces you to take the serum. The immediate feeling you experience is that of hunger.";
+        // Record building payment cost
+        TownBehaviour.total_DEF += 10;
+        TownBehaviour.total_FOOD -= 20;
+        TownBehaviour.total_ENG += 10;
+        dialogueContainer.SetActive(false);
     }
 }
