@@ -21,11 +21,9 @@ public class DayChanger : MonoBehaviour
 
     public void DayShift()
     {
-        Debug.Log("DayShift CALLED");
+        Debug.Log("DayShift CALLED "+ GameManager.currentDay);
 
         SceneManager.LoadScene("EndDayEvent");
-
-        Debug.Log("Day = " + GameManager.currentDay);
     }
 
     public void MoveToNextDay()
