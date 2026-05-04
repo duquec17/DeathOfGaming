@@ -33,9 +33,9 @@ public class DayChanger : MonoBehaviour
         GameManager.currentDay += 1;
 
         // Ends game is specified stat is 0 or lower.
-        if (TownBehaviour.total_FOOD == 0)
+        if (TownBehaviour.total_FOOD <= 0)
         {
-            Debug.Log("Game over, died from X");
+            Debug.Log("Game over, died from starvation");
             SceneManager.LoadScene("GameOver");
         }
         else if (GameManager.currentDay >= 8 && TownBehaviour.total_REC < 100)

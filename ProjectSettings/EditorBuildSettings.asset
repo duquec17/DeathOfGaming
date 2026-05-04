@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: e1862ae7712256242a4886dc3e62694f
+  - enabled: 1
+    path: Assets/Scenes/StoneCometLevel.unity
+    guid: ac9fbbbc4c91a1645a00161635ddc8e2
   m_configObjects: {}

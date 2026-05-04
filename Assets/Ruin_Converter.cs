@@ -65,10 +65,10 @@ public class Ruin_Converter : MonoBehaviour
                 Debug.Log("Wait for player to select building");
                 break;
 
-            case 1: // Will create ENERGY building to replace ruin location
-                if (TownBehaviour.total_DEF >= 25)
+            case 1: // Will create ENERGY building to replace ruin location costs Food
+                if (TownBehaviour.total_FOOD >= 25)
                 {
-                    TownBehaviour.total_DEF -= 25;
+                    TownBehaviour.total_FOOD -= 25;
                     cloneBuilding = Instantiate(energyBuilding, new Vector3Int((int)transform.position.x, (int)transform.position.y, 0), Quaternion.identity);
                     Destroy(gameObject);
                     cloneBuilding.transform.parent = parentObjectTransform; // Places the new building into the container so it's saved
@@ -78,7 +78,7 @@ public class Ruin_Converter : MonoBehaviour
                 Debug.Log("making energy building");
                 break;
             
-            case 2: // Will create defense building to destroy ruin location
+            case 2: // Will create defense building to destroy ruin location costs ENG
                 
                 if (TownBehaviour.total_ENG >= 25)
                 {
@@ -92,7 +92,7 @@ public class Ruin_Converter : MonoBehaviour
                 Debug.Log("making defense building");
                 break;
 
-            case 3: // Will create food building to replace ruin location
+            case 3: // Will create food building to replace ruin location costs def
 
                 if (TownBehaviour.total_DEF >= 25)
                 {
@@ -105,7 +105,7 @@ public class Ruin_Converter : MonoBehaviour
                 Debug.Log("making food building");
                 break;
 
-            case 4: // Will create record building to replace ruin location
+            case 4: // Will create record building to replace ruin location costs all three resources
                 
                 if (TownBehaviour.total_ENG >= 25 && TownBehaviour.total_DEF >= 25 && TownBehaviour.total_FOOD >= 25)
                 {
