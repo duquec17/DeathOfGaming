@@ -70,7 +70,8 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < persistentObjects.Length - 1; i++)
             {
                 if (persistentObjects[i].CompareTag("Player") || 
-                    persistentObjects[i].CompareTag("MainCamera"))
+                    persistentObjects[i].CompareTag("MainCamera") ||
+                    persistentObjects[i].CompareTag("UI"))
                 {
                     // Skips current object in list 
                 }

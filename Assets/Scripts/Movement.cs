@@ -13,9 +13,9 @@ public class Movement : MonoBehaviour
     public Animator animator;
     private Vector3 direction;
 
-    public GameObject popUpBox;
-    int currentScene = 0;
-    bool popOnScreen;
+    private Vector2 input;
+    public Transform aim;
+    bool isWalking = false;
 
     private void Update()
     {
@@ -27,12 +27,6 @@ public class Movement : MonoBehaviour
         direction = new Vector3(horizontal, vertical, 0);
 
         AnimateMovement(direction);
-
-        if (Input.GetKeyDown(KeyCode.L) && popOnScreen == true && currentScene == 0)
-        {
-            SceneManager.LoadScene("StoneCometLevel");
-            currentScene = 5;
-        }
     }
 
 
@@ -40,6 +34,11 @@ public class Movement : MonoBehaviour
     {
         // Move the player
         this.transform.position += direction * speed * Time.deltaTime;
+        if (isWalking)
+        {
+            Vector3 vector3 = Vector3.left * input.x + Vector3.down * input.y;
+            aim.rotation = Quaternion.LookRotation(Vector3.forward, vector3);
+        }
     }
 
     void AnimateMovement(Vector3 direction)
