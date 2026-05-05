@@ -35,31 +35,6 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("Entered Trigger area");
-        if (currentScene == 0)
-        {
-            PopUpStart();
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Debug.Log("Left Trigger area");
-        PopUpEnd();
-    }
-    public void PopUpStart()
-    {
-        popUpBox.SetActive(true);
-        popOnScreen = true;
-    }
-
-    public void PopUpEnd()
-    {
-        popUpBox.SetActive(false);
-        popOnScreen = false;
-    }
 
     private void FixedUpdate()
     {

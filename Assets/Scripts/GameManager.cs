@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [Header("Persistent Objects/Data")]
-    public GameObject[] persistentObjects; 
+    public GameObject[] persistentObjects;
+    public GameObject[] buildContainer;
 
     public ItemManager itemManager;
     public TileManager tileManager;
@@ -56,6 +57,27 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < persistentObjects.Length -1; i++)
             {
                 persistentObjects[i].SetActive(true);
+            }
+        }
+        else if (sceneName == "StoneCometLevel")
+        {
+            // Disables collisions on old buildings, when set to inactive they're still solid
+            for (int i = 0; i < buildContainer.Length; i++)
+            {
+                buildContainer[i].GetComponent<Collider2D>().enabled = false; ;
+            }
+
+            for (int i = 0; i < persistentObjects.Length - 1; i++)
+            {
+                if (persistentObjects[i].CompareTag("Player") || 
+                    persistentObjects[i].CompareTag("MainCamera"))
+                {
+                    // Skips current object in list 
+                }
+                else
+                {
+                    persistentObjects[i].SetActive(false);
+                }
             }
         }
         else if (sceneName == "EndDayEvent")
