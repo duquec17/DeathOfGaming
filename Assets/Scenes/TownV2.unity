@@ -1435,7 +1435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapBoundary: {fileID: 467598925}
   direction: 0
-  additiveForce: 2.5
+  additiveForce: 3
 --- !u!61 &727799573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15200,7 +15200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapBoundary: {fileID: 1159441911}
   direction: 1
-  additiveForce: 2.5
+  additiveForce: 3
 --- !u!1 &2097993999
 GameObject:
   m_ObjectHideFlags: 0
