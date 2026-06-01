@@ -1464,7 +1464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &725459110
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1810,6 +1810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 850906786}
   - component: {fileID: 850906785}
+  - component: {fileID: 850906787}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1844,6 +1845,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &850906787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850906784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe52805724fcc84a92d0fb0f6e0dd2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryPanel: {fileID: 1465326862}
+  slotPrefab: {fileID: 7159057004493317080, guid: 42effc3c1e91ad44eac8a72080bf359f, type: 3}
+  slotCount: 24
+  itemPrefabs:
+  - {fileID: 3779898563726710686, guid: 9543cbefa9199224a8ddeb5d1ac7d916, type: 3}
+  - {fileID: 8391970240766092932, guid: 16e37dd6f2ef4944fbfed58cf1b0f1a5, type: 3}
 --- !u!1 &866106911
 GameObject:
   m_ObjectHideFlags: 0
@@ -4335,6 +4354,7 @@ GameObject:
   - component: {fileID: 1465326863}
   - component: {fileID: 1465326865}
   - component: {fileID: 1465326864}
+  - component: {fileID: 1465326866}
   m_Layer: 5
   m_Name: InventoryPage
   m_TagString: Untagged
@@ -4399,6 +4419,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465326862}
   m_CullTransparentMesh: 1
+--- !u!114 &1465326866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465326862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 100
+    m_Right: 100
+    m_Top: 100
+    m_Bottom: 100
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 100, y: 100}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &1512485589
 GameObject:
   m_ObjectHideFlags: 0
@@ -4550,7 +4594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1542327378
 RectTransform:
   m_ObjectHideFlags: 0
