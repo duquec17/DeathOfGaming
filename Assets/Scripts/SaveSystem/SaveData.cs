@@ -9,4 +9,5 @@ public class SaveData
     public string mapBoundary; // The boundary name for the map
 
     public List<InventorySaveData> inventorySaveData;
+    public List<InventorySaveData> hotbarSaveData;
 }
