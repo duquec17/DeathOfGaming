@@ -100,6 +100,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6439395715051377035, guid: 9543cbefa9199224a8ddeb5d1ac7d916, type: 3}
+      propertyPath: bounceCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6439395715051377035, guid: 9543cbefa9199224a8ddeb5d1ac7d916, type: 3}
+      propertyPath: bounceHeight
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6439395715051377035, guid: 9543cbefa9199224a8ddeb5d1ac7d916, type: 3}
+      propertyPath: bounceDuration
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8887128381338561569, guid: 9543cbefa9199224a8ddeb5d1ac7d916, type: 3}
       propertyPath: m_Sprite
       value: 

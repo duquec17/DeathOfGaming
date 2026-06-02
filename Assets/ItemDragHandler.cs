@@ -10,6 +10,9 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     Transform originalParent;
     CanvasGroup canvasGroup;
 
+    public float minDropDistance = 2f;
+    public float maxDropDistance = 3f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,10 +77,49 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
         else
         {
-            // No slot under drop point
-            transform.SetParent(originalParent);
+            // If where we're dropping is not within the inventory
+            if(!IsWithinInventory(eventData.position))
+            {
+                // Drop our item
+                DropItem(originalSlot);
+            }
+            else
+            {
+                // Snaps back to original spot
+                transform.SetParent(originalParent);
+            }   
         }
 
         GetComponent<RectTransform>().anchoredPosition = Vector2.zero; // Centers item
+    }
+
+    bool IsWithinInventory(Vector2 mousePosition)
+    {
+        RectTransform inventoryRect = originalParent.parent.GetComponent<RectTransform>();
+        return RectTransformUtility.RectangleContainsScreenPoint(inventoryRect, mousePosition);
+    }
+
+    void DropItem(Slot originalSlot)
+    {
+        originalSlot.currentItem = null;
+
+        // Find player
+        Transform playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
+        if(playerTransform == null)
+        {
+            Debug.LogError("Missing 'Player' tag");
+            return;
+        }
+
+        // Select random drop position
+        Vector2 dropOffset = Random.insideUnitCircle.normalized * Random.Range(minDropDistance, maxDropDistance);
+        Vector2 dropPosition = (Vector2)playerTransform.position + dropOffset;
+
+        // Instantiate drop item
+        GameObject dropItem = Instantiate(gameObject, dropPosition, Quaternion.identity);
+        dropItem.GetComponent<BounceEffect>().StartBounce();
+
+        // Destroy the UI item
+        Destroy(gameObject);
     }
 }
