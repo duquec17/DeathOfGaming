@@ -25,6 +25,7 @@ public class MapTransition : MonoBehaviour
             UpdatePlayerPosition(collision.gameObject);
 
             MapController_Manual.Instance?.HighlightArea(mapBoundary.name);
+            MapController_Dynamic.Instance?.UpdateCurrentArea(mapBoundary.name);
         }
     }
 
