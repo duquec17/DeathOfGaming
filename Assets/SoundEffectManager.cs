@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class SoundEffectManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class SoundEffectManager : MonoBehaviour
 
     private static AudioSource audioSource;
     private static AudioSource randomPitchAudioSource;
+    private static AudioSource voiceAudioSource;
     private static SoundEffectLibrary soundEffectLibrary;
     [SerializeField] private Slider sfxSlider;
 
@@ -20,6 +22,7 @@ public class SoundEffectManager : MonoBehaviour
             AudioSource[] audioSources = GetComponents<AudioSource>();
             audioSource = audioSources[0];
             randomPitchAudioSource = audioSources[1];
+            voiceAudioSource = audioSources[2];
             soundEffectLibrary = GetComponent<SoundEffectLibrary>();
             // DontDestroyOnLoad(gameObject); // Needs to be added for when switching between scenes
         }
@@ -46,6 +49,12 @@ public class SoundEffectManager : MonoBehaviour
         }
     }
 
+    public static void PlayVoice(AudioClip audioClip, float pitch = 1f)
+    {
+        voiceAudioSource.pitch = pitch;
+        voiceAudioSource.PlayOneShot(audioClip);
+    }
+
     void Start()
     {
         sfxSlider.onValueChanged.AddListener(delegate { OnValueChanged(); });
@@ -55,6 +64,7 @@ public class SoundEffectManager : MonoBehaviour
     {
         audioSource.volume = volume;
         randomPitchAudioSource.volume = volume;
+        voiceAudioSource.volume = volume;
     }
 
     public void OnValueChanged()
