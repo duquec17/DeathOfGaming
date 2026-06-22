@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 213ac984c0bb4f349bc33d6e90d46e27, type: 3}
-  m_Name: NewNPCDialogue
+  m_Name: LadyDialogue
   m_EditorClassIdentifier: 
-  npcName: Sol Watcher
-  npcPortrait: {fileID: 21300000, guid: d1a0559020241d34083dd8de4922c8c2, type: 3}
+  npcName: Tia Tellae
+  npcPortrait: {fileID: 21300000, guid: 8f336bf6c23cdcd469df29299202d55a, type: 3}
   dialogueLines:
-  - Be...very...afraid young one.
-  - I will watch as you grow.
-  autoProgressLines: 0100
-  autoProgressDelay: 1.5
-  typingSpeed: 0.05
-  voiceSound: {fileID: 8300000, guid: 9ce068fd2357a394199ad7d54753c317, type: 3}
-  voicePitch: 1
+  - Hello little one.
+  - Please mind the green.
+  - Best of luck in your journey.
+  autoProgressLines: 010101
+  autoProgressDelay: 1
+  typingSpeed: 0.035
+  voiceSound: {fileID: 8300000, guid: b9a8628d63e87b04d96d5a7daea0b346, type: 3}
+  voicePitch: 1.6
