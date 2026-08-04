@@ -9,17 +9,21 @@ public class QuestUI : MonoBehaviour
     public GameObject questEntryPrefab;
     public GameObject objectiveTextPrefab;
 
+    /* Can be swapped back for test code whenever
     public Quest testQuest;
     public int testQuestAmount;
     private List<QuestProgress> testQuests = new();
+    */
 
     // Start is called before the first frame update
     void Start()
     {
+        /* Can be swapped back for test code whenever
         for(int i = 0; i < testQuestAmount; i++)
         {
             testQuests.Add(new QuestProgress(testQuest));
         }
+        */
 
         UpdateQuestUI();
     }
@@ -27,7 +31,7 @@ public class QuestUI : MonoBehaviour
     public void UpdateQuestUI()
     {
         // Destroy existing quest entries
-        foreach(var quest in testQuests)
+        foreach(var quest in QuestController.Instance.activateQuests)
         {
             GameObject entry = Instantiate(questEntryPrefab, questListContent);
             TMP_Text questNameText = entry.transform.Find("QuestNameText").GetComponent<TMP_Text>();

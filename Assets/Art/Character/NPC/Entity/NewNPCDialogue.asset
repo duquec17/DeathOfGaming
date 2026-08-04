@@ -15,10 +15,28 @@ MonoBehaviour:
   npcName: Sol Watcher
   npcPortrait: {fileID: 21300000, guid: d1a0559020241d34083dd8de4922c8c2, type: 3}
   dialogueLines:
-  - Be...very...afraid young one.
-  - I will watch as you grow.
-  autoProgressLines: 0100
+  - It seems the current path is not enough.
+  - Will you borrow the strength of another path?
+  - Wonderful!
+  - Let us see what will best help you now.
+  - Not yet, understood.
+  - Perhaps another time.
+  - Good luck following the path.
+  - It seems you have developed the foundation.
+  - Maybe it can be taught to others.
+  autoProgressLines: 010100000000000100
+  endDialogueLines: 000000010001010001
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound: {fileID: 8300000, guid: 9ce068fd2357a394199ad7d54753c317, type: 3}
   voicePitch: 1.5
+  choices:
+  - dialogueIndex: 1
+    choices:
+    - Yes
+    - No
+    nextDialogueIndexes: 0200000004000000
+    givesQuest: 0100
+  questInProgressIndex: 6
+  questCompletedIndex: 7
+  quest: {fileID: 11400000, guid: 36d1767572bfcb0478947ce7e87ea5f3, type: 2}

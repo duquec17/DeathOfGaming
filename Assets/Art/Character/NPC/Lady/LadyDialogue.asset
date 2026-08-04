@@ -33,3 +33,7 @@ MonoBehaviour:
     - Love it
     - Despite it
     nextDialogueIndexes: 0300000004000000
+    givesQuest: 0000
+  questInProgressIndex: 0
+  questCompletedIndex: 0
+  quest: {fileID: 0}

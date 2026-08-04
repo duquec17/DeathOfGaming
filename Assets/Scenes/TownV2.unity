@@ -3314,8 +3314,6 @@ MonoBehaviour:
   questListContent: {fileID: 1618306280}
   questEntryPrefab: {fileID: 7927812514228567983, guid: 665a38d61dd28eb48b90c33f7aec4d87, type: 3}
   objectiveTextPrefab: {fileID: 7546574380756927686, guid: 0e160e6d63822964e85d4ac884aae9ac, type: 3}
-  testQuest: {fileID: 11400000, guid: 36d1767572bfcb0478947ce7e87ea5f3, type: 2}
-  testQuestAmount: 15
 --- !u!1 &822848077
 GameObject:
   m_ObjectHideFlags: 0
@@ -3597,6 +3595,7 @@ GameObject:
   - component: {fileID: 850906785}
   - component: {fileID: 850906787}
   - component: {fileID: 850906788}
+  - component: {fileID: 850906789}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -3668,6 +3667,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c55aab10b591755449b0af27ed57fc89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &850906789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850906784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e04e97babcec07408666e43511386e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateQuests: []
 --- !u!1 &866106911
 GameObject:
   m_ObjectHideFlags: 0
