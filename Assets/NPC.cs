@@ -154,9 +154,13 @@ public class NPC : MonoBehaviour, IInteractable
     {
         for(int i = 0; i < choice.choices.Length; i++)
         {
+            // When creating character with choice in dialogue, but no quest it will still require all 3 indexes to be equal.
+            // Ex: NPC Tellia dialogue index = 2 so Next dialogue index = 2 and gives quest = 2. Adjust values to meet needs like gives quest has false for both of the values
             int nextIndex = choice.nextDialogueIndexes[i];
-            bool givesQuest = choice.givesQuest[i];
-            dialogueUI.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex, givesQuest));
+            bool givesQuest = choice.givesQuest[i]; 
+            dialogueUI.CreateChoiceButton(
+                choice.choices[i], 
+                () => ChooseOption(nextIndex, givesQuest));
         }
     }
 
