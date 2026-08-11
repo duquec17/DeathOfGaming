@@ -11,6 +11,7 @@ public class SaveData
     public List<InventorySaveData> inventorySaveData;
     public List<InventorySaveData> hotbarSaveData;
     public List<ChestSaveData> chestSaveData;
+    public List<QuestProgress> questProgressData;
 }
 
 [System.Serializable]

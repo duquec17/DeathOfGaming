@@ -169,7 +169,8 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         {
             Destroy(gameObject);
         }
-        
+
+        InventoryController.Instance.ReBuildItemsCounts(); // Rebuilds item count for quest UI when an item is dropped 
     }
 
     public void OnPointerClick(PointerEventData eventData)

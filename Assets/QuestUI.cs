@@ -31,6 +31,12 @@ public class QuestUI : MonoBehaviour
     public void UpdateQuestUI()
     {
         // Destroy existing quest entries
+        foreach(Transform child in questListContent)
+        {
+            Destroy(child.gameObject);
+        }
+
+        // Recreates quest entries based on latest info
         foreach(var quest in QuestController.Instance.activateQuests)
         {
             GameObject entry = Instantiate(questEntryPrefab, questListContent);
