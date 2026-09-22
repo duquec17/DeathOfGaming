@@ -38,7 +38,10 @@ public class SaveController : MonoBehaviour
             inventorySaveData = inventoryController.GetInventoryItems(),
             hotbarSaveData = hotbarController.GetHotbarItems(),
             chestSaveData = GetChestsState(),
-            questProgressData = QuestController.Instance.activateQuests
+            questProgressData = QuestController.Instance.activateQuests,
+            handinQuestIDs = QuestController.Instance.handinQuestIDs
+
+            // Need to save individual item that are on map if want to remove
         };
 
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
@@ -81,7 +84,10 @@ public class SaveController : MonoBehaviour
             //loadcheststate
             LoadChestStates(saveData.chestSaveData);
 
+            // Need to load final state of individual items that are on map if I want to not have respawn on next load/play
+
             QuestController.Instance.LoadQuestProgress(saveData.questProgressData);
+            QuestController.Instance.handinQuestIDs = saveData.handinQuestIDs;
         }
         else
         {

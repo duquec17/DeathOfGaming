@@ -6,6 +6,7 @@ using UnityEngine;
 public class InventoryController : MonoBehaviour
 {
     // NOTE: Whenever using item class has to be written as ItemVer2 as the original (undeveloped) version still exists
+    // TBF: Get rid of that old outdated Item class
     private ItemDictionary itemDictionary;
 
     public GameObject inventoryPanel;
@@ -161,6 +162,30 @@ public class InventoryController : MonoBehaviour
                     }
                     
                     slot.currentItem = item;
+                }
+            }
+        }
+
+        ReBuildItemsCounts();
+    }
+
+    public void RemoveItemsFromInventory(int itemID, int amountToRemove)
+    {
+        foreach(Transform slotTranform in inventoryPanel.transform)
+        {
+            if (amountToRemove <= 0) break;
+
+            Slot slot = slotTranform.GetComponent<Slot>();
+            if(slot?.currentItem?.GetComponent<ItemVer2>() is ItemVer2 item && item.ID == itemID)
+            {
+                int removed = Mathf.Min(amountToRemove, item.quantity);
+                item.RemoveFromStack(removed);
+                amountToRemove -= removed;
+
+                if(item.quantity == 0)
+                {
+                    Destroy(slot.currentItem);
+                    slot.currentItem = null;
                 }
             }
         }
