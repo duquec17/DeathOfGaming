@@ -204,6 +204,8 @@ public class NPC : MonoBehaviour, IInteractable
 
     void HandleQuestCompletion(Quest quest)
     {
+        // Give reward
+        RewardsController.Instance.GiveQuestReward(quest);
         QuestController.Instance.HandInQuest(quest.questID);
     }
 }
