@@ -8,9 +8,10 @@ public class MapTransition : MonoBehaviour
     [SerializeField] PolygonCollider2D mapBoundary;
     CinemachineConfiner confiner;
     [SerializeField] Direction direction;
+    [SerializeField] Transform teleportTargetPosition;
     [SerializeField] float additiveForce;
 
-    enum Direction { Up, Down, Left, Right };
+    enum Direction { Up, Down, Left, Right, Teleport};
 
     private void Awake()
     {
@@ -31,6 +32,13 @@ public class MapTransition : MonoBehaviour
 
     private void UpdatePlayerPosition(GameObject player)
     {
+        if(direction == Direction.Teleport)
+        {
+            player.transform.position = teleportTargetPosition.position;
+
+            return;
+        }
+
         Vector3 newPos = player.transform.position;
 
         switch (direction)
