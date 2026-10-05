@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: Name
       value: RedBerry
       objectReference: {fileID: 0}
+    - target: {fileID: -5609206383477243588, guid: 9543cbefa9199224a8ddeb5d1ac7d916, type: 3}
+      propertyPath: buyPrice
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2995459408588918467, guid: 9543cbefa9199224a8ddeb5d1ac7d916, type: 3}
       propertyPath: m_Sprite
       value: 
