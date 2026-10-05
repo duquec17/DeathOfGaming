@@ -12,10 +12,20 @@ public class ItemVer2 : MonoBehaviour
 
     private TMP_Text quantityText;
 
+    // Shop fields
+    public int buyPrice = 10; // Buy from shop
+    [Range(0f, 1f)]
+    public float sellPriceMultiplier = 0.5f; // Sell for 50% buy price
+
     private void Awake()
     {
         quantityText = GetComponentInChildren<TMP_Text>();
         UpdateQuantityDisplay();
+    }
+
+    public int GetSellPrice()
+    {
+        return Mathf.RoundToInt(buyPrice * sellPriceMultiplier);
     }
 
     public void UpdateQuantityDisplay()
