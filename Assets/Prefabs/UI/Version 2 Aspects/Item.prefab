@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7656436176756144491}
   - component: {fileID: 1857680630511629853}
   - component: {fileID: -5609206383477243588}
+  - component: {fileID: 6439395715051377035}
   - component: {fileID: 8887128381338561569}
   - component: {fileID: -5505628874597388390}
-  - component: {fileID: 6439395715051377035}
   m_Layer: 5
   m_Name: Item
   m_TagString: Item
@@ -125,6 +125,21 @@ MonoBehaviour:
   quantity: 1
   buyPrice: 50
   sellPriceMultiplier: 0.5
+--- !u!114 &6439395715051377035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3779898563726710686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f02960cd9e14584c8db2aae3a6670a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceHeight: 0.3
+  bounceDuration: 0.4
+  bounceCount: 2
 --- !u!212 &8887128381338561569
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -212,21 +227,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.08
---- !u!114 &6439395715051377035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3779898563726710686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f02960cd9e14584c8db2aae3a6670a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bounceHeight: 0.3
-  bounceDuration: 0.4
-  bounceCount: 2
 --- !u!1 &7073270415711252611
 GameObject:
   m_ObjectHideFlags: 0

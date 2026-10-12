@@ -11,6 +11,7 @@ public class SaveController : MonoBehaviour
     private InventoryController inventoryController;
     private HotbarController hotbarController;
     private Chest[] chests;
+    private ShopNPC[] shops; // Tracks shop in scene
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class SaveController : MonoBehaviour
         inventoryController = FindObjectOfType<InventoryController>();
         hotbarController = FindObjectOfType<HotbarController>();
         chests = FindObjectsOfType<Chest>();
+        shops = FindObjectsOfType<ShopNPC>();
     }
 
     public void SaveGame()
@@ -39,12 +41,40 @@ public class SaveController : MonoBehaviour
             hotbarSaveData = hotbarController.GetHotbarItems(),
             chestSaveData = GetChestsState(),
             questProgressData = QuestController.Instance.activateQuests,
-            handinQuestIDs = QuestController.Instance.handinQuestIDs
+            handinQuestIDs = QuestController.Instance.handinQuestIDs,
+            playerGold = CurrencyController.Instance.GetGold(),
+            shopStates = GetShopStates()
 
             // Need to save individual item that are on map if want to remove
         };
 
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
+    }
+
+    private List<ShopInstanceData> GetShopStates()
+    {
+        List<ShopInstanceData> shopStates = new List<ShopInstanceData>();
+        foreach(var shop in shops)
+        {
+            ShopInstanceData shopData = new ShopInstanceData
+            {
+                shopID = shop.shopID,
+                stock = new List<ShopItemData>()
+            };
+
+            foreach(var stockItem in shop.GetCurrentStock())
+            {
+                shopData.stock.Add(new ShopItemData
+                {
+                    itemID = stockItem.itemID,
+                    quantity = stockItem.quantity,
+                });
+            }
+
+            shopStates.Add(shopData);
+        }
+
+        return shopStates;
     }
 
     private List<ChestSaveData> GetChestsState()
@@ -84,6 +114,9 @@ public class SaveController : MonoBehaviour
             //loadcheststate
             LoadChestStates(saveData.chestSaveData);
 
+            LoadShopStates(saveData.shopStates);
+            CurrencyController.Instance.SetGold(saveData.playerGold);
+
             // Need to load final state of individual items that are on map if I want to not have respawn on next load/play
 
             QuestController.Instance.LoadQuestProgress(saveData.questProgressData);
@@ -99,6 +132,33 @@ public class SaveController : MonoBehaviour
             MapController_Dynamic.Instance?.GenerateMap();
         }
     }
+
+    private void LoadShopStates(List<ShopInstanceData> shopStates)
+    {
+        if (shopStates == null) return;
+
+        foreach(var shop in shops)
+        {
+            ShopInstanceData shopData = shopStates.FirstOrDefault(s => s.shopID == shop.shopID);
+
+            if(shopData != null)
+            {
+                List<ShopNPC.ShopStockItem> loadedStock = new List<ShopNPC.ShopStockItem>();
+
+                foreach(var itemData in shopData.stock)
+                {
+                    loadedStock.Add(new ShopNPC.ShopStockItem
+                    {
+                        itemID = itemData.itemID,
+                        quantity = itemData.quantity,
+                    });
+                }
+                shop.SetStock(loadedStock);
+
+            }
+        }
+    }
+
 
     private void LoadChestStates(List<ChestSaveData> chestStates)
     {
