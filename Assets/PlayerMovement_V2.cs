@@ -59,6 +59,11 @@ public class PlayerMovement_V2 : MonoBehaviour
         animator.SetFloat("InputX", moveInput.x);
         animator.SetFloat("InputY", moveInput.y);
     }
+
+    public void AttackHeavy(InputAction.CallbackContext context) 
+    {
+        animator.SetTrigger("HeavyAttack");
+    }
     
     void StopMovementAnimations()
     {
