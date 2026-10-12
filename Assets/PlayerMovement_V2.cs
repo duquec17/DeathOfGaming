@@ -60,6 +60,11 @@ public class PlayerMovement_V2 : MonoBehaviour
         animator.SetFloat("InputY", moveInput.y);
     }
 
+    public void AttackLight(InputAction.CallbackContext context)
+    {
+        animator.SetTrigger("LightAttack");
+    }
+
     public void AttackHeavy(InputAction.CallbackContext context) 
     {
         animator.SetTrigger("HeavyAttack");
