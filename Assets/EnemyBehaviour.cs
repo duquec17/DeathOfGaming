@@ -13,7 +13,7 @@ public class EnemyBehaviour : MonoBehaviour
     Transform target;
     Vector2 moveDirection;
 
-    float health, maxHealth;
+    float health, maxHealth = 3f;
 
     private void Awake()
     {
@@ -22,7 +22,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform; 
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+        health = maxHealth;
     }
 
     private void Update()
@@ -44,6 +45,15 @@ public class EnemyBehaviour : MonoBehaviour
         if(target)
         {
             rb.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        if(health < 0)
+        {
+            Destroy(gameObject);
         }
     }
 }
