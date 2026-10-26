@@ -17523,6 +17523,7 @@ GameObject:
   - component: {fileID: 1583456212}
   - component: {fileID: 1583456213}
   - component: {fileID: 1583456214}
+  - component: {fileID: 1583456215}
   m_Layer: 0
   m_Name: Melee
   m_TagString: Untagged
@@ -17645,6 +17646,19 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &1583456215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583456211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9412f89658c0f44283eb201c2591b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &1589836258
 GameObject:
   m_ObjectHideFlags: 0
@@ -17663,6 +17677,7 @@ GameObject:
   - component: {fileID: 1589836266}
   - component: {fileID: 1589836268}
   - component: {fileID: 1589836267}
+  - component: {fileID: 1589836269}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -17823,7 +17838,19 @@ MonoBehaviour:
     m_ActionId: 6cba9ec2-d045-4e17-84de-6dbcdc405681
     m_ActionName: Player/Move[/DualSenseGamepadHID/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2007727577}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: 
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6619f0a2-4ea7-4c54-8b8a-e9625d7ad9fb
     m_ActionName: Player/Fire[/DualSenseGamepadHID/rightTrigger,/Mouse/leftButton]
   - m_PersistentCalls:
@@ -17995,6 +18022,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Library: []
   m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: e5963ed37a09b6c4090a27bc4d183b53, type: 3}
+--- !u!114 &1589836269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589836258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760d14093779bb34b85ccdf94f68ce7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Melee: {fileID: 1583456211}
+  Aim: {fileID: 0}
+  bullet: {fileID: 0}
+  fireForce: 10
 --- !u!1 &1590608280
 GameObject:
   m_ObjectHideFlags: 0
@@ -37883,7 +37926,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 270276978}
-  - {fileID: 1589836260}
   - {fileID: 698397000}
   - {fileID: 2097994001}
   - {fileID: 822848078}
@@ -37892,3 +37934,4 @@ SceneRoots:
   - {fileID: 850906786}
   - {fileID: 52763437}
   - {fileID: 289665081}
+  - {fileID: 1589836260}
