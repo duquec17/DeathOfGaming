@@ -47,10 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Knight
   unitLevel: 1
-  isPlayerTeam: 0
+  isPlayerTeam: 1
   attackPower: 10
   magicPower: 10
-  speed: 0
+  speed: 10
   maxHP: 100
   currentHP: 100
   maxMP: 20

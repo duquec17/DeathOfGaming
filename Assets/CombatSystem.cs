@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public enum CombatState { START, PLAYER_PHASE, ENEMY_PHASE, EXECUTION_PHASE, WON, LOST}
 
@@ -20,6 +22,9 @@ public class CombatSystem : MonoBehaviour
     [Header("RunTime Active Teams")]
     [HideInInspector] public List<Unit> playerTeam = new List<Unit>();
     [HideInInspector] public List<Unit> enemyTeam = new List<Unit>();
+
+    // Character Team Names
+    public TMP_Text[] dialogueText;
 
     // Used to know where to spawn units
     public Transform playerBattleStation;
@@ -49,10 +54,12 @@ public class CombatSystem : MonoBehaviour
 
             Unit unitInfo = spawnedUnit.GetComponent<Unit>();
 
-            if(unitInfo != null)
+            if (unitInfo != null)
             {
                 playerTeam.Add(unitInfo);
             }
+
+            dialogueText[i].text = unitInfo.unitName;
         }
 
         // Spawn Enemy Units at locations
