@@ -87,6 +87,6 @@ public class CombatSystem : MonoBehaviour
 
     void StartRoundSelection()
     {
-
+        currentState = CombatState.PLAYER_PHASE;
     }
 }
