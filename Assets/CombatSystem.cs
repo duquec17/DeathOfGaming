@@ -201,6 +201,7 @@ public class CombatSystem : MonoBehaviour
             });
         }
 
+        Debug.Log("Enemies acted");
         ChangeState(CombatState.EXECUTION_PHASE);
     }
     
@@ -280,9 +281,4 @@ public class CombatSystem : MonoBehaviour
     {
         Debug.Log("Battle won");
     }
-
-
-    
-
-    
 }

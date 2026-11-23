@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -22,8 +23,38 @@ public class CombatUI : MonoBehaviour
     private int currentIndex = 0;
     private bool isSelecting = false;
 
-    private Action<Unit> onTargetConfirmed;
-    private Action onSelectionCanceled;
+    [SerializeField] private Action<Unit> onTargetConfirmed;
+    [SerializeField] private Action onSelectionCanceled;
+
+    [SerializeField] private CombatSystem combatSystem;
+    [SerializeField] private GameObject actionMenuPanel;
+
+    public void OnAttackButtonPressed()
+    {
+        if (combatSystem.currentState != CombatState.PLAYER_PHASE)
+        {
+            Debug.Log(combatSystem.currentState);
+            return;
+        }
+
+        actionMenuPanel.SetActive(false);
+        StartTargetSelection
+        (
+            combatSystem.enemyTeam,
+            onConfirm: (selectedEnemy) =>
+            {
+                combatSystem.OnplayerActionChosen("Attack", selectedEnemy);
+                if (combatSystem.currentState == CombatState.PLAYER_PHASE)
+                {
+                    actionMenuPanel.SetActive(true);
+                }
+            },
+            onCancel: () =>
+            {
+                actionMenuPanel.SetActive(true);
+            }
+        );
+    }
 
     private void OnEnable()
     {
@@ -43,7 +74,7 @@ public class CombatUI : MonoBehaviour
         validTargets.Clear();
         foreach (Unit enemy in enemies)
         {
-            if (enemy != null && enemy.currentHP > 0)
+            if (enemy != null && !enemy.isDead && enemy.currentHP > 0)
             {
                 validTargets.Add(enemy);
             }
@@ -58,6 +89,7 @@ public class CombatUI : MonoBehaviour
 
         currentIndex = 0;
         isSelecting = true;
+
         cursorVisual.gameObject.SetActive(true);
         UpdateCursorPosition();
     }
