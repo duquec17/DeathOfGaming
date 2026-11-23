@@ -39,6 +39,7 @@ public class CombatSystem : MonoBehaviour
         StartCoroutine(SetupBattle());
     }
 
+    // Sets up area but units and their info are independent from combat system
     IEnumerator SetupBattle()
     {
         // Remove old data
@@ -78,7 +79,8 @@ public class CombatSystem : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1f);
-        StartRoundSelection();
+        ChangeState(CombatState.PLAYER_PHASE);
+        //StartRoundSelection();
     }
 
     // ======================
@@ -88,5 +90,41 @@ public class CombatSystem : MonoBehaviour
     void StartRoundSelection()
     {
         currentState = CombatState.PLAYER_PHASE;
+    }
+    /// ====
+    /// ====
+    /// ====
+    
+    public void ChangeState(CombatState state)
+    {
+        currentState |= state;
+
+        switch (currentState)
+        {
+            case CombatState.PLAYER_PHASE:
+                StartPlayerPhase();
+                break;
+
+            case CombatState.ENEMY_PHASE:
+                // TODO: Separate script that handles enemy AI along with targets and etc. 
+                break;
+
+            case CombatState.EXECUTION_PHASE:
+                // TODO: Separate script that handles applying effects, damage, and etc. to both sides
+                break;
+
+            case CombatState.WON:
+                //TODO: Separate script that handles whether the player won and applies next set of logic, EX: Load next wave and/or provide rewards
+                break;
+
+            case CombatState.LOST:
+                //TODO: Separate script that handles whether the palyer lost and applies next set of logic, EX: Load last save point, reset battle, or (specifically this game) rest the day mechanic (i.e. surrender) 
+                break;
+        }
+    }
+
+    private void StartPlayerPhase()
+    {
+        throw new NotImplementedException();
     }
 }
