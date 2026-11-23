@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CombatAction : MonoBehaviour
+public class CombatAction
 {
     public Unit actor; // Move performer
     public Unit target; 

@@ -51,10 +51,12 @@ MonoBehaviour:
   attackPower: 15
   magicPower: 15
   speed: 1
-  maxHP: 100
-  currentHP: 100
+  maxHP: 125
+  currentHP: 80
   maxMP: 25
   currentMP: 15
+  maxDEF: 0
+  currentDEF: 0
   hasActed: 0
   isDead: 0
 --- !u!1 &9188979259319125266

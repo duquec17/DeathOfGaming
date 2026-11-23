@@ -18,7 +18,8 @@ public class Unit : MonoBehaviour
     public int currentHP;
     public int maxMP;
     public int currentMP;
-
+    public int maxDEF;
+    public int currentDEF;
 
     public bool hasActed;
     public bool isDead;
@@ -27,11 +28,23 @@ public class Unit : MonoBehaviour
     {
         currentHP -= dmage;
 
-        if (currentHP < 0)
+        if (currentHP <= 0)
         {
-            currentHP = 0;
             isDead = true;
         }
+    }
+
+    public void Heal(int health)
+    {
+        if (currentHP > 0)
+        {
+            currentHP += health;
+        }
+    }
+
+    public void DefBuff(int defBoost)
+    {
+        currentDEF += defBoost;
     }
 
     public void ResetTurn()
