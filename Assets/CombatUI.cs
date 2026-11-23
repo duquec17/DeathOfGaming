@@ -14,6 +14,10 @@ public class CombatUI : MonoBehaviour
     [SerializeField] private Transform cursorVisual;
     [SerializeField] private Vector3 cursorOffset = new Vector3(0f, 1.5f, 0f);
 
+    [Header("System References")]
+    [SerializeField] private CombatSystem combatSystem;
+    [SerializeField] public GameObject actionMenuPanel;
+
     [Header("Input system actions")]
     [SerializeField] private InputActionReference navigateAction;
     [SerializeField] private InputActionReference submitAction;
@@ -26,18 +30,18 @@ public class CombatUI : MonoBehaviour
     [SerializeField] private Action<Unit> onTargetConfirmed;
     [SerializeField] private Action onSelectionCanceled;
 
-    [SerializeField] private CombatSystem combatSystem;
-    [SerializeField] private GameObject actionMenuPanel;
+    
 
     public void OnAttackButtonPressed()
     {
         if (combatSystem.currentState != CombatState.PLAYER_PHASE)
         {
-            Debug.Log(combatSystem.currentState);
+            Debug.Log($"combatSystem.currentState");
             return;
         }
 
         actionMenuPanel.SetActive(false);
+
         StartTargetSelection
         (
             combatSystem.enemyTeam,
@@ -60,13 +64,19 @@ public class CombatUI : MonoBehaviour
     {
         // Setup input system
         navigateAction.action.performed += OnNavigatePerformed;
+        submitAction.action.performed += OnSubmitPerformed;
+        cancelAction.action.performed += OnCancelPerformed;
 
         navigateAction.action.Enable();
+        submitAction.action.Enable();
+        cancelAction.action.Enable();
     }
 
     private void OnDisable()
     {
         navigateAction.action.performed -= OnNavigatePerformed;
+        submitAction.action.performed -= OnSubmitPerformed;
+        cancelAction.action.performed -= OnCancelPerformed;
     }
 
     public void StartTargetSelection(List<Unit> enemies, Action<Unit> onConfirm, Action onCancel = null)
@@ -80,13 +90,19 @@ public class CombatUI : MonoBehaviour
             }
         }
 
-        if (validTargets.Count == 0) return;
+        if (validTargets.Count == 0)
+        {
+            actionMenuPanel.SetActive(true);
+            return;
+        }
 
         if (EventSystem.current != null)
         {
             EventSystem.current.SetSelectedGameObject(null);
         }
 
+        onTargetConfirmed = onConfirm;
+        onSelectionCanceled = onCancel;
         currentIndex = 0;
         isSelecting = true;
 
@@ -121,5 +137,25 @@ public class CombatUI : MonoBehaviour
     {
         Unit selectedEnemy = validTargets[currentIndex];
         cursorVisual.position = selectedEnemy.transform.position + cursorOffset;
+    }
+
+    private void OnSubmitPerformed(InputAction.CallbackContext context)
+    {
+        if (!isSelecting || validTargets.Count == 0) return;
+
+        isSelecting = false;
+        cursorVisual.gameObject.SetActive(false);
+        onTargetConfirmed?.Invoke(validTargets[currentIndex]);
+        Debug.Log("Submit Performed");
+    }
+
+    private void OnCancelPerformed(InputAction.CallbackContext context)
+    {
+        if (!isSelecting) return;
+
+        isSelecting = false;
+        cursorVisual.gameObject.SetActive(false);
+        onSelectionCanceled?.Invoke();
+        Debug.Log("Cancel Performed");
     }
 }

@@ -31,6 +31,10 @@ public class Unit : MonoBehaviour
         if (currentHP <= 0)
         {
             isDead = true;
+            if (isDead == true)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 

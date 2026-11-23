@@ -11,6 +11,7 @@ public enum CombatState { START, PLAYER_PHASE, ENEMY_PHASE, EXECUTION_PHASE, WON
 public class CombatSystem : MonoBehaviour
 {
     public CombatState currentState;
+    public CombatUI combatUI;
 
     [Header("Spawn Battle Stations")]
     public Transform[] playerSpawnPoints;
@@ -130,6 +131,8 @@ public class CombatSystem : MonoBehaviour
 
     void NextPlayer()
     {
+        combatUI.actionMenuPanel.SetActive(true);
+
         while (currentPlayerIndex < playerTeam.Count)
         {
             Unit unit = playerTeam[currentPlayerIndex];
@@ -142,6 +145,7 @@ public class CombatSystem : MonoBehaviour
 
         if (currentPlayerIndex >= playerTeam.Count)
         {
+            combatUI.actionMenuPanel.SetActive(false);
             ChangeState(CombatState.ENEMY_PHASE);
             return;
         }
@@ -235,6 +239,9 @@ public class CombatSystem : MonoBehaviour
 
             if (CheckForBattleEnd()) yield break;
         }
+
+        // Returns to player combat after all calculations done
+        ChangeState(CombatState.PLAYER_PHASE);
     }
 
     private void PerformAction(CombatAction action)
@@ -268,6 +275,7 @@ public class CombatSystem : MonoBehaviour
             ChangeState(CombatState.WON);
             return true;
         }
+
 
         return false;
     }

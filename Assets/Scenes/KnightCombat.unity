@@ -153,11 +153,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorVisual: {fileID: 1459867423}
   cursorOffset: {x: 0, y: 1.5, z: 0}
+  combatSystem: {fileID: 473246781}
+  actionMenuPanel: {fileID: 874250266}
   navigateAction: {fileID: -3940791146172962570, guid: de3de7d8f72d9694eb2d795fdc7c4041, type: 3}
   submitAction: {fileID: -6991038985501416533, guid: de3de7d8f72d9694eb2d795fdc7c4041, type: 3}
   cancelAction: {fileID: -7118572743061479075, guid: de3de7d8f72d9694eb2d795fdc7c4041, type: 3}
-  combatSystem: {fileID: 473246781}
-  actionMenuPanel: {fileID: 874250266}
 --- !u!4 &15334209
 Transform:
   m_ObjectHideFlags: 0
@@ -685,6 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  combatUI: {fileID: 15334208}
   playerSpawnPoints:
   - {fileID: 1371231136}
   - {fileID: 884853548}
