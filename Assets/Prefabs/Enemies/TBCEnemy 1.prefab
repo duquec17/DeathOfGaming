@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Leaper
-  unitLevel: 99
+  unitLevel: 20
   isPlayerTeam: 0
   attackPower: 25
   magicPower: 0
