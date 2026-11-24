@@ -249,7 +249,15 @@ public class CombatSystem : MonoBehaviour
         switch (action.actionType)
         {
             case "Attack":
-                action.target.Damaged(action.actor.attackPower);
+                if (action.target.DodgeChance(action.target.speed))
+                {
+                    Debug.Log($"{action.target.unitName} dodged {action.actor.unitName}");
+                }
+                else
+                {
+                    action.target.Damaged(action.actor.attackPower);
+                }
+                
                 break;
 
             case "Heal":
@@ -275,7 +283,6 @@ public class CombatSystem : MonoBehaviour
             ChangeState(CombatState.WON);
             return true;
         }
-
 
         return false;
     }

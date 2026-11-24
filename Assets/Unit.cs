@@ -14,6 +14,9 @@ public class Unit : MonoBehaviour
     public int magicPower;
     public int speed;
 
+    // Combat values
+    public float accuracy;
+
     public int maxHP;
     public int currentHP;
     public int maxMP;
@@ -26,6 +29,7 @@ public class Unit : MonoBehaviour
 
     public void Damaged(int dmage)
     {
+        // dmage variable makes uses of attacker's power
         currentHP -= dmage;
 
         if (currentHP <= 0)
@@ -54,5 +58,21 @@ public class Unit : MonoBehaviour
     public void ResetTurn()
     {
         hasActed = false;
+    }
+
+    public bool DodgeChance(int dodgeChance)
+    {
+        // subtract dodge chance value (speed) of target from attack chance which is 100 then add back
+        accuracy = 1f - (dodgeChance / 100f);
+
+        // Stops unit from being 100% untouchable
+        accuracy = Mathf.Clamp(accuracy, 0.1f, 0.95f);
+
+        if (accuracy < Random.Range(0f, 1f)) 
+        {
+            return true; // dodge 
+        }
+
+        return false; // Continue with hit
     }
 }
